@@ -1,0 +1,299 @@
+Servlet
+========
+It is a dynamic web resource program which is used to enhance the functionality of web server,proxy server or application server.
+
+or
+
+Servlet is a java based dynamic web resource program which is used to generate dynamic web pages. 
+
+or
+
+It is a single instance multithread java based web resource program which is used to develop web applications.
+
+
+Diagram: servlet2.1
+
+Important Terminologies
+========================
+javax.servlet.Servlet(I)
+	|
+	|
+javax.servlet.GenericServlet(AC)
+	|
+	|
+javax.servlet.http.HttpServlet(C)
+
+
+Servlet API's
+==============
+API is a collection of packages.
+ex:
+	javax.servlet
+	javax.servlet.http 
+
+First web application development having Servlet program as web resource program
+================================================================================
+
+Diagram: servlet2.1
+
+Deployment Directory structure
+------------------------------
+DateApp
+|
+|------Java Resources 
+|	|
+	|------src
+		|
+		|---com.ihub.www
+			|
+			|---DateSrv.java
+|
+|------Web Content
+	|
+	|----WEB-INF
+		|
+		|---web.xml 
+Note:
+-----
+In above application we need to add "servlet-api.jar" file in project build path.	
+
+step1:
+------
+	Launch eclipse IDE by choosing workspace location.
+
+step2:
+-----
+	Create a Dynamic Web project i.e DateApp. 
+	ex:
+		File --> new --> Dynamic web project --> 
+		project Name: DateApp
+		dynamic web module version : 3.0  --> next --> next --> 
+		generate web.xml file(click to checkbox) --> Finish.
+
+step3:
+-----	
+	Add "servlet-api.jar" file in project build path.
+	ex:
+		right click to DateApp --> build path --> configuration build path -->
+		libraries --> Add external jars --> select servlet-api.jar --> open -->ok.
+
+
+step4:
+-----
+	Create "com.ihub.www" package inside "Java Resource/src" folder.
+	ex:
+		right click to src --> new --> package --> name : com.ihub.www --> finish.
+
+step5:
+------
+	Create a servlet program i.e "DateSrv" inside "com.ihub.www" package.
+	ex:
+		right click to com.ihub.www --> new --> class --> name : DateSrv --> finish.
+
+DateSrv.java
+-------------
+package com.ihub.www;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Date;
+
+import javax.servlet.GenericServlet;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+
+public class DateSrv extends GenericServlet
+{
+	public void service(ServletRequest req,ServletResponse res)throws ServletException,IOException
+	{
+		PrintWriter pw=res.getWriter();
+		res.setContentType("text/html");
+		
+		Date d=new Date();
+		pw.println("<center><h1>Current Date and Time :<br> "+d+"</h1></center>");
+		
+		pw.close();
+
+	}
+}
+
+step6:
+-----
+	Configure each servlet program in web.xml file.
+	ex:
+
+web.xml
+-------
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  
+  <servlet>
+		<servlet-name>DateSrv</servlet-name>
+		<servlet-class>com.ihub.www.DateSrv</servlet-class>   
+  </servlet>
+  <servlet-mapping>
+  		<servlet-name>DateSrv</servlet-name>
+  		<url-pattern>/test</url-pattern>
+  </servlet-mapping>
+
+</web-app>	
+
+step7:
+-----	
+	Add Tomcat 7.x  server to eclipse IDE.
+	ex:
+		window --> preferences --> server --> runtime environment -->
+		click to add button --> select Apache Tomcat 7.0 --> Next --> 
+		select tomcat installation directory(click to browse) --> ok --> finish-->ok. 
+
+
+step8:
+-------
+	Run dynamic project i.e DateApp.
+	ex:
+		right click to DateApp --> run as --> run on server --> 
+		Apache tomcat 7.0 server --> next --> finish.
+
+step9:
+-----
+	Test the application by using below request below.
+	ex:
+						url pattern 
+						|
+		http://localhost:2525/DateApp/test 
+			|         |     |
+		hostname      portno webapplication 
+
+Types of URL Patterns
+======================
+Every servlet will recognize with the help of url pattern only.
+
+Our client, web container, other web resource programs will recognize each servlet by using url pattern only.
+
+URL pattern will hide technology name or class name from the outsider for security reason. 
+
+We have three types of url patterns.
+
+1) Exact match url pattern 
+
+2) Directory match url pattern
+
+3) Extension match url pattern 
+
+Every server is designed to support three types of url patterns.
+
+1) Exact match url pattern 
+--------------------------
+It starts with '/' symbol followed by a name.
+
+web.xml
+-------
+	<url-pattern>/test</url-pattern>
+
+request url
+-----------
+	http://localhost:2525/DateApp/test   -- valid 
+	http://localhost:2525/DateApp/best   -- invalid 
+	http://localhost:2525/DateApp/x/test   --invalid  		
+		
+
+2) Directory match url pattern
+------------------------------
+It starts with '/' symbol and ends with '*' symbol.
+
+web.xml
+-------
+	<url-pattern>/x/y/*</url-pattern>
+
+request url
+-----------
+	http://localhost:2525/DateApp/x/y/z       -- valid 
+	http://localhost:2525/DateApp/x/y/z/test  -- valid 
+	http://localhost:2525/DateApp/y/x/z       -- invalid 		
+
+3) Extension match url pattern 
+---------------------------
+It starts with '*' symbol having some extension.
+
+web.xml
+-------
+	<url-pattern>*.do</url-pattern>
+
+request url
+-----------
+	http://localhost:2525/DateApp/x/y/z       -- invalid 
+	http://localhost:2525/DateApp/x/y/z.do    -- valid 
+	http://localhost:2525/DateApp/x/y/z.it     --invalid 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
