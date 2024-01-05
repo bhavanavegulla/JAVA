@@ -1,0 +1,209 @@
+Naming Conventions in java
+===========================
+In java, uppercase letters will treated as different and lowercase letters will treated as different that's why we consider java is a case sensitive programming language.
+
+As java is a case sensitive we must and should follow naming conventions for following things.
+
+ex:
+	classes
+	interfaces
+	variables
+	methods
+	keywords
+	packages & 
+	constants 
+
+classes
+----------
+In java, A class name must and should starts with uppercase letter and if it contains multiple words then each inner word must starts with initcap.
+ex:
+	Predefined classes		Userdefined classes
+	------------------		-------------------
+	System				Test
+	FileWriter 			DemoApp
+	BufferedReader 			QualityThought
+	PrintWriter 			JavaDemo
+	and etc.			and etc.
+	
+
+interfaces
+-----------
+In java, an interface name must and should starts with capital letter and if it contains multiple words then each inner word must starts with initcap.
+ex:
+	Predefined interfaces		Userdefined interfaces
+	---------------------		-------------------
+	Runnable 			ITest			
+	Serializable 			IDemoApp
+	Cloneable 			IQualityThought
+	Statement 			and etc.
+	ListIterator 
+	and etc.
+
+variables
+-----------
+In java, a variable name must and should starts with lowercase letter and if it contains multiple words then each inner word starts with initcap.
+ex:
+	predefined variables		userdefined variables
+	--------------------		---------------------
+	length				i	
+	out				empId
+	err				studName
+	in 				deptNo
+	and etc.			and etc.
+
+methods
+-------
+In java, a method name must and should starts with lowercase letter and if it contains multiple words then each inner word starts with initcap.
+ex:
+	predefined methods		userdefined methods
+	-------------------		------------------
+	hashCode()			calculateBillAmt()
+	toString()			getInfo()
+	getMessage()			setDetails()
+	setPriority()			and etc.
+	and etc.
+
+
+keywords
+---------
+In java, all keywords we need to write under lowercase letters only.
+
+ex:
+	predefined keywords
+	------------------
+	public , static , void  , class , if, else , do , for , while and etc.
+
+
+packages
+----------
+In java, all packages we need to write under lowercase letters only.
+ex:
+	predefined packages		userdefined packages
+	-------------------		---------------------
+	java.lang			ihubtalent
+	java.io				com.ihubtalent.www
+	java.util			com.google.www 
+	java.text			and etc.
+	java.util.stream
+	and etc.
+
+constants
+----------
+In java, all constants we need to write under uppercase letters only.
+
+ex:
+	predefined constants		Userdefined constants
+	-------------------		--------------------
+	MAX_PRIORITY			LIMIT 
+	NORM_PRIORITY			DEGREE
+	MIN_PRIORITY			and etc.
+	MAX_VALUE
+	MIN_VALUE
+	and etc.
+
+Assignment
+============
+Class 		:	GopiNath 
+
+Interface 	:	IGopiNath 
+
+Variable	:	gopiNath
+
+Method 		:	gopiNath()
+
+Package 	:	com.gopinath.www
+
+Constant	:	GOPINATH/GOPI_NATH
+
+
+Interview Questions
+=====================
+
+Q) What is Java?
+
+Java is a object oriented, platform independent, case sensitive, strongly typed checking, high level , opensource programming language developed by James Gosling in the year of 1995.
+
+
+Q)What are the features of Java?
+
+We have following important features in java.
+
+1)Simple 
+2)Object oriented 
+3)Platform independent 
+4)Highly secured 
+5)Architecture Neutral 
+6)Robust  
+7)Multithreaded 
+8)Dynamic 
+9)Distributed 
+and etc.
+
+
+Q)Who is the responsible to destroy the objects in java?
+
+	Garbage Collector 
+
+Q) Who is the responsible to execute the java program?
+
+	JVM (Java Virtual Machine)
+
+Q) Where our java program will execute?
+
+	JRE (Java Runtime Environment)
+
+
+Q)In how many ways we can call garbage collector? 
+
+There are two ways to call garbage collector in java.
+
+1)System.gc()
+
+2)Runtime.getRuntime().gc()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
