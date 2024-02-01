@@ -1,0 +1,329 @@
+RestController:
+================
+RestController is used for making restful web services with the help of the @RestController annotation. 
+
+This annotation is used at the class level and allows the class to handle the requests made by the client.
+
+The main difference between the @RestController and the @Controller is that the @Restcontroller 
+is a combination of the @controller and @ResponseBody annotation.
+
+We have following HTTP methods along with rest annotations.
+
+@RestController
+---------------
+	HTTP Methods 			Annotations 
+	------------			-------------
+	GET				@GetMapping
+	POST				@PostMapping
+	PUT				@PutMapping
+	Delete				@DeleteMapping
+	and etc.
+
+@Controller
+-----------
+	
+	Http methods			Annotations  
+	-----------			---------------
+	GET 				@RequestMapping 			
+	POST				@RequestMapping 
+	PUT 				@RequestMapping 
+	DELETE 				@RequestMapping 
+
+
+Spring Boot Application using @RestController
+===============================================
+
+Project structure
+--------------------
+RestApp
+|
+|----src/main/java
+|	|
+|	|----com.ihub.www
+|		|
+|		|--RestAppApplication.java
+|		|--HomeController.java
+|---src/main/resources
+|	|
+|	|-----application.properties
+|
+|---src/test/java
+|	|
+|	|-----RestAppApplicationTests.java
+|
+| --
+| --
+| --
+
+|---pom.xml
+|
+|
+
+
+step1:
+-------
+	Create a spring starter project.
+	ex:
+		File --> new --> spring starter project --> 
+				Name : RestApp
+				Group: com.ihub.www
+				Artifact: RestApp
+				Description: This is Spring Boot Application
+				package : com.ihub.www  ---> next -->
+				Starter: Spring Web --> next --> Finish.
+
+
+step2:
+------
+	create a HomeController class inside "src/main/java".
+	ex:
+	Right click to package(com.ihub.www) --> new --> 
+	class --> Class: HomeController -->finish.
+
+
+step3:
+-------
+	Add @Controller annotation and "@RequestMapping" annotation inside HomeController class.
+
+HomeController.java
+---------------------
+package com.ihub.www;
+
+import org.springframework.stereotype.RestController;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@RestController
+public class HomeController {
+
+	@GetMapping("/")
+	public String home()
+	{
+		return "Rest Controll Example";
+	}
+}
+	
+
+step4:
+------
+	Configure tomcat server port number and jsp file.
+
+application.properties
+------------------------
+server.port=9191
+
+
+step5:
+-------
+	Run Spring Boot application.
+	ex:
+		Right click to RestApp --> run as --> spring boot application.
+
+
+step6:
+------
+	Test the application with below request url.
+	ex:
+		http://localhost:9191/
+
+
+
+Q)Difference between Monolethic Architecture vs Microservice  Architecture?
+
+Monolithic Architecture
+=======================
+Monolith means composed all in one piece.
+
+The Monolithic application describes a single-tiered software application in which different
+components combined into a single program from a single platform.
+
+In Monolithic Architecture we are developing every service individually and at end of the
+development we are packaging all services as single war file and deploying in a server.
+
+Lets take an example of E-commerce website where we have basic and common option of Customer 
+Service, Product Service and Cart Service, which a customer can access through browser.When we 
+launch the application It is deployed as a single monolithic application.It means we will have 
+only one single instance. 
+
+Diagram: sb4.1
+
+Advantages
+===========
+1)Simple to develop
+
+2)Simple to test
+
+3)Simple to deploy
+
+4)Simple to scale
+
+
+Drawbacks of Monolithic Architecture
+==================================
+1)Large and Complex Application
+	
+2)Slow Development
+	
+3)Blocks Continenous development
+  		 	
+4)Unscalable
+
+5)Unreliable
+
+6)Inflexible
+
+
+MicroService Architecture
+==============================
+Microservices are the small services that work together
+
+The microservice defines an approach to the architecture that divides an application into 
+a pool of loosely coupled services that implements business requirements. 
+
+In Microservice architecture,Each service is self contained and implements a single bussiness 
+capability.
+
+The microservice architectural style is an approach to develop a single application
+as a suite of small services.It is next to Service-Oriented Architecture (SOA). 
+
+Each microservice runs its process and communicates with lightweight mechanisms.
+
+These services are built around business capabilities and independently developed by 
+fully automated deployment machinery.
+
+
+Advantages of Microservice Architecture
+======================================
+1)Independent Development
+------------------------
+	Each microservice can be developed independently.
+	A single development team can build test and deploy the service.
+	
+2)Independent Deployment
+------------------------
+	we can update the service without redeploying the entire application.
+	Bug release is more managable and less risky.
+
+3)Fault Tolerance
+------------------
+	If service goes down ,It won't take entire application down with it.
+
+4)Mixed Technology Stack
+---------------------
+	It is used to pick best technology which best suitable for our application.	
+
+5)Granular Scaling
+-----------------
+	In Granular scaling ,services can scaled independently.Instead of entire application.
+
+
+Diagram: sb4.2
+
+
+List of companies working with micro-services
+=======================================
+We have following companies working with microservices.
+
+1. Netflix 
+2. Amazon 
+3. Uber 
+4. eBay 
+5. SoundCloud 
+6. Karma 
+7. Groupon.
+and etc.
+
+
+
+customer micro service
+======================
+
+To develop any micro service we need to follow spring boot flow layered architecture.
+
+Diagram: sb4.3
+
+
+Project structure
+--------------------------
+
+customer-service
+|
+|-----src/main/java
+|	|
+	|-----com.ihub
+	|	|
+	|	|----CustomerMicroserviceApplication
+	|
+	|-----com.ihub.controller
+	|	|
+	|	|----CustomerController.java (controller class)
+	|	
+	|-----com.ihub.entity
+	|	|
+	|	|----Customer.java (POJO class)
+	|
+	|-----com.ihub.service
+	|	|
+	|	|----CustomerService.java  (service class)
+	|
+	|-----com.ihub.repository
+	|	|
+	|	|----CustomerRepository.java (interface)
+	|
+
+|-------src/main/resources
+|	|
+|	|-----application.yml
+	|
+|
+|-------pom.xml
+|
+
+step1:
+-------
+	Create a "customer-service" project.
+	starters:
+		    spring reactive web
+		    spring Data JPA
+		    Lombok
+		    mysql driver
+
+step2:
+-----
+	Download and Install project lombok.
+	ex:
+		https://projectlombok.org/download
+
+step3:
+-------
+	Create a Customer Model class.
+
+Customer.java
+------------------
+package com.ihub.entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Entity
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class Customer {
+	
+	@Id
+	@Column(length =6)
+	private int custId;
+	
+	@Column(length =12)
+	private String custName;
+
+	@Column(length=12)
+	private String custAddress;
+	
+}

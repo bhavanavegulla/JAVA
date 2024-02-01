@@ -1,0 +1,297 @@
+Limitations with Spring Framework
+=================================
+In spring framework , a developer is responsible for following things.
+
+1) Add dependencies / jar files 
+
+2) Add Configurations i.e applicationContext.xml 
+
+3) Arranging the virtual server like Tomcat , Weblogic and etc to deploy the web application.
+
+4) Managing the physical database like Oracle, MySQL and etc to communicate with database. 
+
+To overcome these limitations we need to use Spring Boot.
+
+
+Spring Boot
+============
+Spring Boot is a java based application framework developed by Pivotal Team.
+
+It provides RAD(Rapid Application Development) features for spring based applications.
+
+It is an open source , production ready grade spring based applications with minimum configurations.
+
+In short , spring boot is a combination of 
+ex:
+	spring framework + embedded server + embedded database.
+
+Diagram:
+		Developer
+		   |
+		   |
+		Spring Boot
+		   |
+		   |
+		Spring Framework 	 
+
+
+Advantages of Spring Boot
+============================
+> It creates standalone application which can be run by using java -jar.
+
+> It provides production ready grade features like metrics, healthcheck, externalized configuration and etc.
+
+> It provides optionate stater's POM's to simply the MAVEN configuration.
+
+> It does not support XML configurations. Instead we will use Annotations.
+
+> It allows us to test our web applications by using various HTTP servers like Tomcat.We don't need to convert to war file.
+
+> It uses CLI (Command Line Interface) tool for creating and testing the spring boot project.
+
+> It minimize the boiler plate codes and xml configurations.
+
+> It supports number of plugin's.
+
+> It increases productivity and reduces development time.
+
+List of companies are working with spring boot
+==============================================
+We have following list of companies working with spring boot.
+
+1. Netflix 
+2. Alibaba
+3. LinkedIn 
+4. Uber 
+5. Groupon 
+6. Zillow 
+7. Intuit.
+8. welmart and etc.
+
+
+Interview Questions
+====================
+
+Q) What is spring boot?
+
+It is a java based application framework developed by pivotal team.It provides RAD features for spring based applications.It is a standalone , production ready grade spring based applications with minimum configurations.
+
+
+Q)How many components are there in spring boot?
+
+We have four components in spring boot.
+
+1) AutoConfiguration 
+
+2) Starter 
+
+3) CLI tool 
+
+4) Actuator
+
+
+Q) List out embedded servers present in spring boot?
+
+   	We have following embedded servers.
+	ex:
+		Tomcat , Jetty , Undertow 
+
+
+Q) List out embedded databases present in spring boot?
+	
+	We have following embedded databases.
+	ex:
+		H2, HSQL , Derby				
+
+
+Q) Where we will do configurations in spring boot?
+
+	We can perform spring boot configurations in two files.
+	ex:
+		application.properties 
+		application.yml 
+
+Q) List out some stereotype annotations?
+
+	We have following list of stereotype annotations.
+	ex:
+		@Controller
+		@Service 
+		@Repository 
+		@Component 
+		and etc.
+
+
+Q) Which annotation is used to create a controller in spring boot?
+
+	@Controller annotation 
+
+
+Q) Which annotation is used to create a service in spring boot?
+
+	@Service annotation 
+
+
+Q) Which annotation is used to create a repository in spring boot?
+	
+	@Repository annotation 	
+
+
+Q) How many ways we can develop spring boot project?
+
+	There are two ways to develop spring boot project.
+
+	1) Using Spring Initializr 
+
+	2) Using IDE's (Spring Tool Suit(STS) / Intellij)
+
+
+Spring Initializr 
+===================
+Spring initializr is a based based tool provided by pivotal web services. 
+
+Using spring initializr we can generate create basic structure of a project but it won't add application code.
+
+It offers extensiable API for JVM based projects.
+
+To create a project structure using spring initializr we need to use below url.
+ex:
+	https://start.spring.io/
+
+Steps to create a spring boot project using spring initializr
+----------------------------------------------------------
+step1:
+-----
+	Goto spring initializr web based tool.
+	ex:
+		https://start.spring.io/
+
+step2:
+----
+	Create a  spring boot project i.e SBApp1.
+	ex:
+		Project 	: Maven 
+		Language	: Java
+		Dependencies	: (no dependencies)
+		Spring Boot	: 3.2.1
+		 	
+		Project Metadata
+
+		Group 		: com.ihub.www	
+		Artifact	: SBApp1
+		Name		: SBApp1
+		description	: First Spring Boot Project
+		package 	: com.ihub.www 
+		packaging	: jar 
+		Java		: 17			
+
+		---> click on generate button.
+
+step3:
+----
+	Download and Extract STS IDE.
+
+step4:
+-----
+	Launch STS IDE by choosing workspace location.
+	
+step5:
+------
+	Exract SBApp1 project and open the project in STS IDE.
+	ex:
+		import projects --> Maven --> Existing Maven project --> Next -->
+		Root directory --> SBApp1 --> select folder --> finish.		
+
+step6:
+-----
+	Add some code in SBApp1Application.java file.
+	ex:
+		System.out.println("I Love Spring Boot");
+
+step7:
+-----
+	Run spring boot project.
+	ex:
+		right click on SBApp1 --> run as --> spring boot App.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

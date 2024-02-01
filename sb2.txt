@@ -1,0 +1,367 @@
+STS - Spring Tool Suit
+=======================
+STS is an IDE's to develop spring boot applications.
+
+It provides eclipse-based environment.
+
+It provides ready to use environment for implement, run, develop, deploy spring applications.
+
+Steps to work with STS IDE
+----------------------------
+step1:
+-----
+	Launch STS IDE.
+
+step2:
+-----
+	Create a spring boot starter project.
+	ex:
+		File --> new --> spring starter project --> 
+		Name		: SBApp2
+		Type		: Maven
+		packaging	: jar 
+		Java version	: 17
+		Language	: JAVA
+		Group		: com.ihub.www 
+		Artifact	: SBApp2
+		description	: My second spring boot project
+		package 	: com.ihub.www 	
+	
+		---> next --> next --> finish.
+
+step3:
+------
+	Write simple statement in SBApp2Application.java file.
+	ex:
+		System.out.println("This is my second project");
+
+step4:
+-----
+	Run spring boot project.
+	ex:
+		Right click to SBApp2 --> run as --> spring boot application.
+
+
+
+Q) What is @SpringBootAnnotation in spring boot?
+
+@SpringBootAnnotation is a combination of three annotations.
+
+1) @EnableAutoConfiguration : It enables the auto configuration mechanism. 	
+
+2) @ComponentScan : It is used to scan the package where application is located.
+
+3) @Configuration : It is used to register extra beans in context and add additional configrations.
+
+
+Spring Boot Architecture
+=========================
+Spring Boot follows layered architecture.
+
+Before we goto spring boot layered architecture, we will see how many layers present in spring boot.
+
+We have following four layers in spring boot where one layer interacts with another layer.
+
+1) Presentation Layer 
+
+2) Business Layer 
+
+3) Persistence Layer 
+
+4) Database Layer 
+
+Diagram: sb2.1
+
+1)Presentation Layer: 
+-----------------------------
+The presentation layer handles the HTTP requests, translates the JSON parameter to object, and authenticates the request and transfer it to the business layer.
+
+2)Business Layer: 
+------------------------
+The business layer handles all the business logic. It consists of service classes and uses services provided by data access layers. It also performs authorization and validation.
+
+3)Persistence Layer:
+-----------------------------
+ The persistence layer contains all the storage logic and translates business objects from and to database rows.
+
+4)Database Layer:
+----------------------------
+ In the database layer, CRUD (create, retrieve, update, delete) operations are performed.
+
+
+Diagram: sb2.2
+
+
+With respect to the Diagram
+------------------------------------------
+The client makes the HTTP requests (PUT or GET).
+
+The request goes to the controller, and the controller maps that request and handles it. After that, it calls the service logic if required.
+
+In the service layer, all the business logic performs. It performs the logic on the data that is mapped to JPA with model classes.
+
+A JSP page is returned to the user if no error occurred.
+
+
+
+Spring Boot starters
+=====================
+Spring Boot starters provides number of starters to add jar file in CLASSPATH. 
+
+Spring Boot built-in starters makes our development easier and rapid.
+
+Spring Boot starters are dependency descriptors.
+
+In the Spring Boot Framework, all the starters follow a similar naming pattern: 
+spring-boot-starter-*, where * denotes a particular type of application.
+
+ex:
+spring-boot-starter-test
+spring-boot-starter-web
+spring-boot-starter-validation (bean validation)
+spring-boot-starter-security
+spring-boot-starter-data-jpa
+spring-boot-starter-data-mongodb
+spring-boot-starter-mail
+
+
+Third-Party Starters
+==================
+We can also include third party starters in our project.
+
+The third-party starter starts with the name of the project.
+ex:
+	abc-spring-boot-starter.
+
+
+
+
+Spring Boot Starter Web
+========================
+There are two important features of spring-boot-starter-web.
+
+>It is compatible for web development
+>AutoConfiguration
+
+If we want to develop a web application,we need to add the following dependency in pom.xml file.
+ex:
+	<dependency>  
+		<groupId>org.springframework.boot</groupId>  
+		<artifactId>spring-boot-starter-web</artifactId>  
+		<version>2.2.2.RELEASE</version>  
+	</dependency>  
+
+Spring web starter uses Spring MVC, REST and Tomcat as a default embedded server.
+
+The single spring-boot-starter-web dependency transitively pulls in all dependencies related to web development. 
+
+
+By default, the spring-boot-starter-web contains the following tomcat server dependency:
+ex:
+	<dependency>  
+		<groupId>org.springframework.boot</groupId>  
+		<artifactId>spring-boot-starter-tomcat</artifactId>  
+		<version>2.0.0.RELEASE</version>  
+		<scope>compile</scope>  
+	</dependency>  
+
+The spring-boot-starter-web ,auto-configures the following things that are required for the web development:
+
+1)Dispatcher Servlet
+2)Error Page
+3)Web JARs for managing the static dependencies
+4)Embedded servlet container
+
+
+
+Spring Boot + JSP  Application
+===============================
+
+Project structure
+--------------------
+SBApp3
+|
+|----src/main/java
+|	|
+|	|----com.ihub.www (base package)
+|		|
+|		|--SBApp3Application.java
+|		|--HomeController.java
+|---src/main/resources
+|	|
+|	|-----application.properties
+|
+|---src/test/java
+|	|
+|	|-----SpringBootApp3ApplicationTests.java
+|
+| --
+| --
+| --
+|-----src
+	|
+	|----main
+		|
+		|----webapp
+			|
+			|----pages
+			|	|
+				|----index.jsp
+|---pom.xml
+|
+|
+
+
+step1:
+-------
+	Create a spring starter project.
+	ex:
+		File --> new --> spring starter project --> 
+				Name : SBApp3
+				Group: com.ihub.www
+				Artifact: SBApp3
+				Description: This is Spring Boot Application with JSP
+				package : com.ihub.www  ---> next -->
+				Starter: Spring Web --> next --> Finish.
+
+
+step2:
+------
+	create a HomeController class inside "src/main/java".
+	ex:
+	Right click to package(com.ihub.www) --> new --> class --> 
+	Class: HomeController -->finish.
+
+
+step3:
+-------
+	Add @Controller annotation and "@RequestMapping" annotation 
+	inside HomeController class.
+
+HomeController.java
+---------------------
+package com.ihub.www;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class HomeController {
+
+	@RequestMapping("home")
+	public String home()
+	{
+		return "index";
+	}
+}
+	 
+step4:
+-----
+	create a "webapp" and "pages" folder inside "src/main" folder for adding JSP files.
+	ex:
+		|-----src
+			|
+			|----main
+				|
+				|----webapp	
+					|
+					|-----pages
+
+
+step5:
+---------
+	create "index.jsp" file inside "src/main/webapp/pages/" folder.
+	ex:
+		Right click to pages folder--> new --> file ---> 
+		File Name: index.jsp --> finish.
+
+index.jsp
+----------
+<center>
+	<h1>
+		I love Spring Boot Programming
+	</h1>
+</center>
+
+
+
+step6:
+------
+	Add "Tomcat Embed Jasper" dependency to read the jsp file.
+	
+
+	ex:
+		<dependency>
+    			<groupId>org.apache.tomcat.embed</groupId>
+    			<artifactId>tomcat-embed-jasper</artifactId>
+		</dependency>		
+
+Note:
+------
+	Embedded Tomcat server does not have Jasper. So we need to add above dependency.
+
+step7:
+-------
+	Configure tomcat server port number and jsp file.
+
+application.properties
+------------------------
+server.port=9090
+
+spring.mvc.view.prefix=/pages/
+spring.mvc.view.suffix=.jsp
+
+
+step8:
+-------
+	Run Spring Boot application.
+	ex:
+		Right click to MVCApp2 --> run as --> spring boot application.
+
+
+step9:
+------
+	Test the application with below request url.
+	ex:
+		http://localhost:9191/home
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

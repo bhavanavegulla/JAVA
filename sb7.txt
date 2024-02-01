@@ -1,0 +1,511 @@
+Spring Cloud Hystrix
+=====================
+Hystrix is a fault tolerance library provided by Netflix.
+
+Using Hystrix we can prevent Deligation of failure from one service to another service.
+
+Hystrix internally follows Circuit Breaker Design pattern.
+
+In short circuit breaker is used to check availability of external services like web service call,database connection and etc.
+
+Diagram: sb7.1
+
+
+notification-service
+========================
+
+step1:
+------
+	create a "notification-service" project in STS.
+	Starter:
+			Spring Web.
+
+step2:
+------
+	Add the following code in main sprping boot application.
+
+
+NotificationServiceApplication.java
+--------------------------------------	
+package com.ihub.www;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@SpringBootApplication
+@RestController
+@RequestMapping("/notification")
+public class NotificationServiceApplication {
+
+	@GetMapping("/send")
+	public String sendEmail()
+	{
+		return "Email sending method is called from notification-service";
+	}
+	public static void main(String[] args) {
+		SpringApplication.run(NotificationServiceApplication.class, args);
+	}
+
+}
+
+step3:
+------
+	convert application.properties file to application.yml file.
+
+
+step4:
+------
+	configure server port number in application.yml file.
+
+application.yml
+------------------
+server:
+  port: 7171
+
+
+step5:
+-------
+	Run "notification-service" project as spring boot application.
+
+
+step6:
+-----
+	Test the application with below request url.
+	ex:
+		http://localhost:7171/notification/send
+
+
+
+paytm-service
+========================
+
+step1:
+------
+	create a "paytm-service" project in STS.
+	Starter:
+			Spring Web.
+
+step2:
+------
+	Add the following code in main sprping boot application.
+
+
+PaytmServiceApplication.java
+--------------------------------------	
+package com.ihub.www;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@SpringBootApplication
+@RestController
+@RequestMapping("/paytm")
+public class PaytmServiceApplication {
+
+	@GetMapping("/pay")
+	public String paymentProcess()
+	{
+		return "Payment Pocess method called in paytm-service";
+	}
+	
+	
+	public static void main(String[] args) {
+		SpringApplication.run(PaytmServiceApplication.class, args);
+	}
+
+}
+
+
+step3:
+------
+	convert application.properties file to application.yml file.
+
+
+step4:
+------
+	configure server port number in application.yml file.
+
+application.yml
+------------------
+server:
+  port: 8181
+
+
+step5:
+-------
+	Run "paytm-service" project as spring boot application.
+
+
+step6:
+-----
+	Test the application with below request url.
+	ex:
+		http://localhost:8181/paytm/pay
+
+
+bookmyshow-service
+=====================
+
+step1:
+-----
+	create a "bookmyshow-service" project in STS.
+	Starter:	
+			Spring Web
+
+step2:
+-----
+	Add Spring Cloud Hystrix dependency in pom.xml file.
+
+	ex:
+	<dependency>
+	<groupId>org.springframework.cloud</groupId>
+	<artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+	<version>2.2.10.RELEASE</version>
+	</dependency>
+
+
+step3:
+------
+	Change <parent> tag inside pom.xml file for hystrix compatability.
+	ex:
+	<parent>
+    		<groupId>org.springframework.boot</groupId>
+    		<artifactId>spring-boot-starter-parent</artifactId>
+    		<version>2.3.3.RELEASE</version>
+    		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
+
+step4:
+-----
+	Add the following code in main spring boot application.
+
+
+BookmyshowServiceApplication
+-----------------------------
+
+package com.ihub.www;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.hystrix.EnableHystrix;
+import org.springframework.context.annotation.Bean;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
+
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+
+@SpringBootApplication
+@RestController
+@EnableHystrix
+public class BookmyshowServiceApplication {
+
+	@Autowired
+	RestTemplate restTemplate;
+	
+	@HystrixCommand(groupKey = "ihub" , commandKey = "ihub" ,fallbackMethod = "bookMyShowFallBack")
+	@GetMapping("/book")
+	public String bookShow()
+	{
+		String paytmServiceResponse=restTemplate.getForObject("http://localhost:8181/paytm/pay", String.class);
+		String notificationServiceResponse=restTemplate.getForObject("http://localhost:7171/notification/send",String.class);
+	
+		return paytmServiceResponse+"\n"+notificationServiceResponse;
+	}
+	
+	
+	public static void main(String[] args) {
+		SpringApplication.run(BookmyshowServiceApplication.class, args);
+		
+	}
+	
+	public String  bookMyShowFallBack()
+	{
+		return "service gateway failed";
+	}
+	
+	@Bean
+	public  RestTemplate    getRestTemplate() {
+	
+		return new RestTemplate();	
+		
+	}
+
+}
+
+
+step5:
+--------
+	convert application.properties file to application.yml file.
+
+
+step6:
+------
+	configure server port number inside application.yml file.
+
+application.yml
+---------------
+server:
+  port: 9191
+	
+
+step7:
+--------
+	Add spring core dependency inside pom.xml file.
+
+	ex:
+		<dependency>
+    			<groupId>org.springframework</groupId>
+    			<artifactId>spring-core</artifactId>
+    			<version>5.3.17</version>
+		</dependency>
+
+step8:
+-------
+	Run the "bookmyshow-service" application as spring boot application.	
+
+
+step9:
+-------
+	Test the application by using below request url.
+	ex:
+		http://localhost:9191/book
+
+
+step10:
+------
+	Now stop any micro service i.e notification-service or paytm-service.
+
+step11:
+--------
+	Test the "bookmyshow-service" application by using below url.
+	ex:
+		http://localhost:9191/book
+
+Note:
+----
+	Here fallback method will execute with the help of Hystrix.
+
+
+
+Spring Security
+=============
+Spring Security is a framework which provides various security features like  authentication, 
+authorization to create secure Java Enterprise Applications.
+
+It is a sub-project of Spring framework which was started in 2003 by Ben Alex.
+
+Later on, in 2004, It was released under the Apache License as Spring Security 2.0.0.
+
+This framework targets two major areas of application
+
+1)Authentication 
+---------------------
+It is a process of knowing and identifying the user that wants to access.
+
+2)Authorization 
+---------------------
+It is a process to allow authority to perform actions in the application.
+
+
+Project structure
+--------------------------
+SpringSecurityApp
+|
+|----src/main/java
+|	|
+|	|----com.ge.www
+|		|
+|		|--SpringSecurityAppApplication.java
+|	|
+|	|----com.ge.www.controlller
+|		|
+|		|--HomeController.java
+|		
+|---src/main/resources
+|	|
+|	|-----application.yml
+|
+|---src/test/java
+|	|
+|	|-----SBSpringSecurityApplicationTests.java
+
+|---pom.xml
+|
+|
+
+step1:
+---------
+	create a spring starter project.
+	starters: spring web
+		  spring security.
+
+step2:
+----------
+	create a Controller to accept the request.
+	
+HomeController.java
+--------------------------
+package com.ge.www.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class HomeController {
+
+	@GetMapping("/msg")
+	public String msg()
+	{
+		return "Welcome to Spring Security";
+	}
+}
+
+step3:
+--------
+	Configure server port number in application.properties file.
+application.yml
+-----------------------------
+server:
+  port: 9191
+
+
+step4:
+----------
+	Run the application as spring boot application.
+
+step6:
+----------
+	Test the application by using below url.
+	ex:
+	http://localhost:9191/msg
+
+Note:
+--------
+	When we hit the request ,we will get login page.
+	Default username is "user" and password we can copy from STS console.
+
+step7:
+--------
+	To change the default user and password we can use below properties in 
+	application.properties file.
+
+application.yml
+-----------------------------
+server:
+  port: 9191
+
+spring
+  security:
+    user:
+      name=raja
+      password=rani
+
+step8:
+----------	
+	Relaunch the spring boot application.
+
+step9:
+----------
+	Test the application by using below url.
+	ex:
+	http://localhost:9191/msg
+
+
+
+
+
+How can we convert spring  boot project to jar file
+===================================================
+step1:
+------
+	Make sure spring boot project is ready.
+
+step2:
+-----
+	Create a jar file for spring boot project.
+	ex:
+		right click to project --> run as --> Maven build --> 
+		Goals: package  --> run. 
+
+step3:
+-----
+	Check the jar file inside target folder of a spring boot project.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
