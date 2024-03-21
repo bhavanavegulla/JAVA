@@ -1,0 +1,194 @@
+JavaScript
+==========
+
+Q) What is the difference between Java and JavaScript?
+
+Java					JavaScript
+-------					----------
+It is a non-scripting language.		It is a scripting language.
+
+It is a Object oriented programming 	It is a object based programming language.
+language.
+
+It is a strongly typed checking		It is a weakly typed checking language. 
+language.
+
+It does not required browser window 	It requires browser window for execution.
+for execution.
+
+We can run invidually.			We can't run invidually.
+
+It is a complex language.		It is easy language.
+
+
+History of Javascript
+=====================
+Original name of JavaScript is LiveScript.
+
+LiveScript was introduced by Netscape Corporation in late 1990's.
+
+LiveScript was developed by using C language syntax's.
+
+Late in 1995, Brenden Eich the popular scientist of Netscape Corporation renamed LiveScript to JavaScript.
+
+The official name of JavaScript is ECMA script.
+
+ECMA stands for European Computer Manfacturer Association.
+
+Advantages of JavaScript
+========================
+> It is used to create interactive web pages.
+
+> It is used to display dialog boxes and popup boxes.
+
+> It is used to add dynamic content to the web page.
+
+> It is used to perform form validation.
+
+> It is used to create response(dynamic) web page.
+
+> It supports objects i.e Arrays,Strings,RegEx and etc.
+
+> It supports Date and Time.
+
+> It supports cookies.
+
+> It supports dropdown menu and etc.
+
+Javascript syntax
+===============
+<script  type="text/javascript">
+	stmt1;
+	stmt2;
+	stmt3;
+</script>	
+
+Here semicolon is not mandatory because javascript is a loosely typed checking language.
+
+Here "type" attribute is optional to declare.
+
+ex:
+	<script>
+		stmt1
+		stmt2
+		stmt3
+	</script>
+
+
+Sublime Editor
+==============
+Download link : https://www.sublimetext.com/download
+
+ex:1
+----
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<script type="text/javascript">
+			
+			document.writeln("Welcome to JavaScript");
+
+		</script>
+</body>
+</html>
+
+ex:2
+----
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<script>
+			
+			document.writeln("Welcome to JavaScript")
+
+		</script>
+</body>
+</html>
+
+ex:
+----
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<script>
+			
+			document.writeln("Welcome to JavaScript");
+			document.writeln("<br>");
+			document.writeln("This is ihub talent management");
+
+		</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

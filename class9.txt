@@ -1,0 +1,848 @@
+CSS border property
+===================
+CSS border property to used to set the border to the elements.
+
+We have following list of CSS border properties.
+
+1) border-style 
+
+2) border-color 
+
+3) border-width 
+
+4) border shorthand 
+
+1) border-style
+---------------
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>	
+		<style>
+			h1
+			{
+				border-style:solid;
+			}
+			h2
+			{
+				border-style:double;
+			}
+			h3
+			{
+				border-style:dotted;
+			}
+			h4
+			{
+				border-style:inset;
+			}
+			p
+			{
+				border-style:dashed;
+			}
+			div
+			{
+				border-style:groove;
+			}
+		</style>
+	</head>
+	<body>
+			<h1> Heading1 Tag </h1>
+			<h2> Heading2 Tag </h2>
+			<h3> Heading3 Tag </h3>
+			<h4> Heading4 Tag </h4>
+			<p> Paragraph Tag </p>
+			<div> Division Tag</div>
+			
+	</body>
+</html>
+
+2) border-color 
+----------------
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>	
+		<style>
+			h1
+			{
+				border-style:solid;
+				border-color:red;
+			}
+			h2
+			{
+				border-style:double;
+				border-color:blue;
+			}
+			h3
+			{
+				border-style:dotted;
+				border-color:green;
+			}
+			h4
+			{
+				border-style:inset;
+				border-color:cyan;
+			}
+			p
+			{
+				border-style:dashed;
+				border-color:pink;
+			}
+			div
+			{
+				border-style:groove;
+				border-color:yellow;
+			}
+		</style>
+	</head>
+	<body>
+			<h1> Heading1 Tag </h1>
+			<h2> Heading2 Tag </h2>
+			<h3> Heading3 Tag </h3>
+			<h4> Heading4 Tag </h4>
+			<p> Paragraph Tag </p>
+			<div> Division Tag</div>
+			
+	</body>
+</html>
+
+3) border-width
+---------------
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>	
+		<style>
+			h1
+			{
+				border-style:solid;
+				border-color:red;
+				border-width:2px;
+			}
+			h2
+			{
+				border-style:double;
+				border-color:blue;
+				border-width:4px;
+			}
+			h3
+			{
+				border-style:dotted;
+				border-color:green;
+				border-width:6px;
+			}
+			h4
+			{
+				border-style:inset;
+				border-color:cyan;
+				border-width:8px;
+			}
+			p
+			{
+				border-style:dashed;
+				border-color:pink;
+				border-width:10px;	
+			}
+			div
+			{
+				border-style:groove;
+				border-color:yellow;
+				border-width:12px;
+			}
+		</style>
+	</head>
+	<body>
+			<h1> Heading1 Tag </h1>
+			<h2> Heading2 Tag </h2>
+			<h3> Heading3 Tag </h3>
+			<h4> Heading4 Tag </h4>
+			<p> Paragraph Tag </p>
+			<div> Division Tag</div>
+			
+	</body>
+</html>
+
+4) border shorthand 
+---------------------
+border-width: 2px 
+border-style: solid;
+border-color:red;
+
+or
+
+border : 2px solid red;
+
+
+ex:
+--
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>	
+		<style>
+			h1
+			{
+				border : 2px solid red;
+			}
+			h2
+			{
+				border : 4px double blue;
+			}
+			h3
+			{
+				border : 6px dotted green;
+			}
+			h4
+			{
+				border : 8px inset cyan;	
+			}
+			p
+			{
+				border : 10px dashed pink;
+			}
+			div
+			{
+				border : 12px groove yellow;
+			}
+		</style>
+	</head>
+	<body>
+			<h1> Heading1 Tag </h1>
+			<h2> Heading2 Tag </h2>
+			<h3> Heading3 Tag </h3>
+			<h4> Heading4 Tag </h4>
+			<p> Paragraph Tag </p>
+			<div> Division Tag</div>
+			
+	</body>
+</html>
+
+CSS border-radius property
+===========================
+CSS border-radius property is used to set the radius to the element's corners.
+
+Diagram: class9.1
+
+We have following list of CSS border-radius properties.
+
+1) border-top-left-radius 
+
+2) border-top-right-radius 
+
+3) border-bottom-right-radius 
+
+4) border-bottom-left-radius 
+
+5) border-radius shorthand 
+
+ex:
+---
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>	
+		<style>
+			div
+			{
+				border:4px solid black;
+				border-top-left-radius:5px;
+				border-top-right-radius:10px;
+				border-bottom-right-radius:15px;
+				border-bottom-left-radius:20px;
+			}
+		</style>
+	</head>
+	<body>
+			<div> This is Div Tag</div>
+			
+	</body>
+</html>
+
+ex:
+---
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>	
+		<style>
+			div
+			{
+				border:4px solid black;
+				border-radius: 2px 4px 6px 8px;
+			}
+		</style>
+	</head>
+	<body>
+			<div> This is Div Tag</div>
+			
+	</body>
+</html>
+
+ex:
+---
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>	
+		<style>
+			div
+			{
+				border:4px solid black;
+				border-radius: 4px 8px;
+			}
+		</style>
+	</head>
+	<body>
+			<div> This is Div Tag</div>
+			
+	</body>
+</html>
+
+ex:
+---
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>	
+		<style>
+			div
+			{
+				border:4px solid black;
+				border-radius:8px;
+			}
+		</style>
+	</head>
+	<body>
+			<div> This is Div Tag</div>
+			
+	</body>
+</html>
+
+
+CSS Colors
+==========
+In CSS we can defined the color in fours ways.
+
+1) Valid color name 
+
+2) Hexa value 
+
+3) RGB value 
+
+4) HSL value 
+
+1) Valid color name 
+--------------------
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>	
+		<style>
+			body
+			{
+				background-color:tomato;
+			}
+			h1
+			{
+				color: forestgreen;
+			}
+		</style>
+	</head>
+	<body>
+			<h1> This is Heading Tag </h1>
+			
+	</body>
+</html>
+
+2) Hexa value 
+-------------
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>	
+		<style>
+			body
+			{
+				background-color:#FFFF00;
+			}
+			h1
+			{
+				color: #00FF00;
+			}
+		</style>
+	</head>
+	<body>
+			<h1> This is Heading Tag </h1>
+			
+	</body>
+</html>
+
+3) RGB value 
+--------------
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>	
+		<style>
+			body
+			{
+				background-color:rgb(255,0,0);
+			}
+			h1
+			{
+				color: rgb(102, 255, 51);
+			}
+		</style>
+	</head>
+	<body>
+			<h1> This is Heading Tag </h1>
+			
+	</body>
+</html>
+
+4) HSL value 
+------------
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>	
+		<style>
+			body
+			{
+				background-color:hsl(105, 100%, 60%);
+			}
+			h1
+			{
+				color: hsl(30, 100%, 20%);
+			}
+		</style>
+	</head>
+	<body>
+			<h1> This is Heading Tag </h1>
+			
+	</body>
+</html>
+
+
+CSS Margin property
+====================
+CSS margin property is used to give the space around the elements,outside the defined border. 
+
+CSS margin contains following properties.
+
+1) margin-top 
+
+2) margin-right 
+
+3) margin-bottom 
+
+4) margin-left 
+
+5) margin shorthand 
+
+All the above margin properties will take following values.
+
+i) auto 	: It declares the margin by the browser.	
+
+ii) value	: It declares the margin in px,pt,cm,em and etc.
+
+iii) %		: It declares the margin in percentage.  
+
+iv) inherit 	: It take the margin from parent tag.
+
+
+
+ex:
+----
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+		<style>
+			h1
+			{
+				border:2px solid #000;
+				margin-top:100px;
+				margin-right:100px;
+				margin-bottom:100px;
+				margin-left:100px;
+			}
+			
+		</style>
+	</head>
+	<body>	
+			<h1> This is Heading Tag </h1>
+	</body>
+</html>
+
+ex:
+----
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+		<style>
+			h1
+			{
+				border:2px solid #000;
+				
+				margin-top:10%;
+				margin-left:20%;
+				margin-right:20%;
+				margin-bottom:10%;
+
+			}
+			
+		</style>
+	</head>
+	<body>	
+			<h1> This is Heading Tag </h1>
+	</body>
+</html>
+
+ex:
+---
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+		<style>
+			div
+			{
+				border:2px solid #FF0000;
+				margin:50px;
+			}
+			h1
+			{
+				border:2px solid #000;
+				margin:inherit;
+			}
+			
+		</style>
+	</head>
+	<body>	
+		<div>
+			<h1> This is Heading Tag </h1>
+		</div>
+	</body>
+</html>
+
+If margin contains four values.
+ex:
+	margin : 25px 50px 100px 150px;
+
+	top , right, bottom , left 	
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+		<style>
+			h1
+			{
+				border:2px solid #000;
+				
+				margin: 25px 50px 100px 150px;
+			}
+			
+		</style>
+	</head>
+	<body>	
+			<h1> This is Heading Tag </h1>
+	</body>
+</html>
+
+If margin contains three values.
+ex:
+	margin : 50px  100px  150px;
+
+	top, right and left, bottom 
+
+ex:
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+		<style>
+			h1
+			{
+				border:2px solid #000;
+				
+				margin : 50px  100px  150px;
+
+			}
+			
+		</style>
+	</head>
+	<body>	
+			<h1> This is Heading Tag </h1>
+	</body>
+</html>
+
+If margin contains two values.
+ex:
+	margin: 50px  100px;
+
+	top and bottom  , left and right 
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+		<style>
+			h1
+			{
+				border:2px solid #000;
+				
+				margin : 50px  100px;
+
+			}
+			
+		</style>
+	</head>
+	<body>	
+			<h1> This is Heading Tag </h1>
+	</body>
+</html>
+
+If margin contains one property:
+ex:
+	margin : 100px;
+
+	All sides are 100px
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+		<style>
+			h1
+			{
+				border:2px solid #000;
+				
+				margin :100px;
+
+			}
+			
+		</style>
+	</head>
+	<body>	
+			<h1> This is Heading Tag </h1>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

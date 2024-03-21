@@ -1,0 +1,191 @@
+ReactJS 
+========
+It is a declarative, efficient, flexible javascript frontend library responsible to develop frontend applications and User interfaces i.e UI.
+
+It is an open source , component based javascript frontend library responsible only for view layer of the application.
+
+It is developed by Jordon Walke who was the software engineer at Facebook.
+
+It was initially given by Facebook and later they have used in their own products like whatsapp and instagram.
+
+It was released to the public in the month of May,2013.
+
+The official website of reactjs is https://react.dev
+
+The latest version of reactjs is v18.2.0.
+
+The main objective of reactjs is to develop reusable components.
+
+A component is a building block of react application.
+
+
+Advantages of ReactJS
+======================
+1) It is easy to learn and easy to use.
+
+2) It is used to create reusable components.
+
+3) It supports virtual DOM.
+
+4) It supports one way data binding.
+
+5) It supported by all major browsers.
+
+6) Good documentation and community support.
+
+
+Q) What is the difference between Angular and React ?
+
+Angular							React
+----------						--------
+It is a product of Google.				It is a product of Facebook.
+
+It was developed in Oct,2015.				It was developed in May,2013.
+
+It is an open source javascript 			It is an open source javascript	
+framework which is used to 				frontend library responsible for 
+develop web and mobile applications.			view layer of an applications.
+
+It uses traditional DOM.				It uses virtual DOM.
+
+It supports two way data binding.			It supports one way data binding.
+
+Angular is used to develop rich featured 		React is used to develop single page 
+applications.						applications(SPA). 
+
+Typescript language is used.				JSX language is used.
+
+Jasmine and Karma is used as a testing framework.	Jest and Enzyme is used as a testing 
+							framework.
+
+It runs on 4200 port number.				It runs on 3000 port number.
+
+Angular used by Google, Mc'Donalds, Nike 		React us by Facebook, whatsapp, instagram,
+and etc.						airbnb and etc.
+
+Pre-requision to learn ReactJS
+==============================
+1) Knowledge on HTML,CSS,JavaScript and Bootstrap.
+
+2) Basics on JSX
+
+3) Idea on ES6 
+
+4) npm commands 
+
+
+How ReactJS works internally
+============================
+Diagram: react1.1
+
+ReactJS internally uses virtual DOM.
+
+Virtual DOM is also a Tree Node Structure.
+
+Virtual DOM will find a effective way to make the changes in traditional/real DOM.Hence react applications will execute fastly.
+
+
+
+
+Assignment program
+==================
+Q) Write a java program to display given output?
+
+Input:
+	IJK
+
+Output:
+	IJ 
+	IK
+	JI
+	JK
+	KI
+	KJ
+ex:
+---
+class Test 
+{
+	public static void main(String[] args)
+	{
+		String str="IJK";
+
+		int n=str.length();
+
+		for(int i=0;i<n;i++)
+		{
+			for(int j=0;j<n;j++)
+			{
+				if(i!=j)
+				{
+					System.out.println(str.charAt(i)+""+str.charAt(j));
+				}
+			}
+		}
+	}
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

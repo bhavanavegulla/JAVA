@@ -1,0 +1,548 @@
+
+ex:
+---
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<script>
+			
+			document.writeln("<h1 style='color:red'>Welcome to JavaScript</h1>");
+			document.writeln("<br>");
+			document.writeln("<p style='color:blue'>This is ihub talent management</p>");
+
+		</script>
+</body>
+</html>
+Note:
+-----
+	If a document contains HTML, CSS and javascript then it is called DHTML.
+	DHTML stands for Dynamic Hypertext Markup Language.
+
+JavaScript Engine 
+==================
+JavaScript engine is used to execute javascript code in browser window.
+
+JavaScript engine converts user understandable scripting language to machine understandable scripting language.
+
+By default every browser contains javascript engine.
+
+We have following list of javascript engines.
+
+ex:
+	Browser			Javascript Engine 
+	-------			------------------
+	Chrome 			V8 Engine 
+	Mozilla			Spider Monkey 
+	Edge			Chakra 
+	and etc.
+
+
+Comments in javascript
+======================
+Comments are created for documentation purpose.
+
+Comments are used to improve readability of our code.
+
+In javascript, we have two types of comments.
+
+1) Single Line Comment 
+----------------------
+	It is used to comment a single line.
+	ex:
+		// comment here 
+
+
+2) Multiple Line Comment 
+------------------------
+	It is more convenient because we can comment a single and multiple lines.
+	ex:
+		/*
+			-
+			-  comment here 
+			-
+		*/
+
+Note:
+----
+	HTML	-	<!-- comment here -->
+
+	CSS	-	/*	
+				comment here 
+			*/		
+
+
+Output statement in javascript
+==============================
+Whenever we want to display any data or user defined statements then we need to use 
+output statement.
+
+We have two types of output statement in javascript.
+
+1) document.writeln() 
+
+2) console.log() 
+
+
+1) document.writeln()
+---------------------
+It is used to display the output on browser window.
+
+ex:
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<script>
+			document.writeln("Welcome to JavaScript");
+		</script>
+</body>
+</html>
+
+2) console.log() 
+-----------------
+It is used to display the output on browser console.
+
+In order to see the browser console we need to press F12 Function key.
+
+ex:
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<script>
+			console.log("stmt executed");
+		</script>
+</body>
+</html>
+
+Types of Javascript
+====================
+We have two types of javascripts.
+
+1) Internal javascript / Embedded javascript 
+
+2) External javascript / Seperate javascript 
+
+
+1) Internal javascript
+---------------------
+In internal javascript,  we will add html code and javascript code in a ".html" file.
+
+Advantages:
+
+> There is no confusion of multiple files.
+
+> We can maintain HTML code and javascript code seperately.
+
+Disadvantage:
+
+> If code is increases then it will increase the complexity.
+
+Note:
+----
+	For practising level we need to use internal javascript.
+
+
+2) External javascript
+----------------------
+In external javascript, we will add html code in ".html" file and javascript code in ".js" file.
+
+Advantages:
+
+> If code is increases then it will not increase the complexity.
+
+> We can maintain html code and javascript in a seperate files.
+
+Disadvantage:
+
+> There is a confusion of multiple files. 
+
+Note:
+----
+	For company level we need to use external javascript.
+
+
+
+Javascript variables
+=====================
+A name which is given to a memory location is called variable.
+
+Purpose of variable is used to store the data.
+
+Javascript variables having same rules as we have for identifiers.
+
+Rule1:
+----
+	Javascript variable must and should starts with alphabet,dollar symbol and underscore
+	but not with digits.
+	ex:
+		var  _abcd;
+		var  a123;
+		var  $abcd; 
+		var  1abcd; //invalid 
+
+Rule2:
+-----
+	Every javascript variable is a case sensitive.
+	ex:
+		var number;
+		var NUMBER;
+		var NumBer;
+
+We have two types of variables in javascript.
+
+1) Local variable 
+
+2) Global variable 
+
+1) Local variable 
+-----------------
+A variable which is declared inside the functions and blocks is called local variable.
+
+Local variable we can access with in the function but not outside the function.
+
+ex:
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<script>
+			function  f1()
+			{
+				//local variable
+				var i=10;
+				document.writeln(i+"");
+			}
+			//calling 
+			f1();
+		</script>
+</body>
+</html>
+
+ex:
+---
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<script>
+			function  f1()
+			{
+				//local variable
+				var i=10;
+				document.writeln(i+"");
+			}
+			function f2()
+			{
+				document.writeln(i+"<br>");
+			}
+
+			//calling 
+			f1();
+			f2();
+		</script>
+</body>
+</html>
+
+2) Global variable 
+------------------
+A variable which is declared outside the function or a block is called global variable.
+
+Global variable we can access with in the function and outside the function.
+
+ex:
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<script>
+			//global variable
+			var i=100;
+
+			function f1()
+			{
+				document.writeln(i+"<br>");
+			}
+			
+			//calling 
+			f1();
+
+		</script>
+</body>
+</html>
+
+ex:
+---
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<script>
+			//global variable
+			var i=100;
+
+			function f1()
+			{
+				document.writeln(i+"<br>");
+			}
+			function f2()
+			{
+				document.writeln(i+"<br>");
+			}
+
+			//calling 
+			f1();
+			f2();
+
+		</script>
+</body>
+</html>
+
+
+Javascript Datatypes
+====================
+Javascript is a dynamically typed language it means we don't need to declare any datatype at the time of variable declaration.
+
+To decalre any variable in javascript we will use "var" keyword.
+
+Javascript internally uses javascript engine to determine perticular datatype based on the value.
+
+We have two types of datatypes in javascript.
+
+1) Primitive datatypes
+
+2) Non-Primitive datatypes 
+
+1) Primitive datatypes
+-----------------------
+We have following list of primitive datatypes.
+
+ex:
+	datatype		description
+	--------		-----------
+	number			It is used to represent numbers
+	boolean			It is used to represent boolean
+	String			It is used to represent string
+	null			It is used to represent null
+	undefined		It is used to represent undefined
+	
+ex:
+----
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<script>
+			
+			var i=10;
+			document.writeln(i+"<br>"); //10
+
+			var j=10.5;
+			document.writeln(j+"<br>");//10.5
+
+		</script>
+</body>
+</html>
+
+ex:
+---
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<script>
+			
+			var i=true;
+			document.writeln(i+"<br>"); //true
+
+			var j=false;
+			document.writeln(j+"<br>");//false
+
+		</script>
+</body>
+</html>
+
+ex:
+---
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<script>
+			
+			var i="ihub";
+			document.writeln(i+"<br>"); //ihub
+
+			var j='talent';
+			document.writeln(j+"<br>");//talent
+
+		</script>
+</body>
+</html>
+
+ex:
+---
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<script>
+			
+			var i=null;
+			document.writeln(i+"<br>"); //null
+
+		</script>
+</body>
+</html>
+
+ex:
+---
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<script>
+			
+			var i;
+			document.writeln(i+"<br>"); //undefined
+
+		</script>
+</body>
+</html>
+
+2) Non-Primitive datatypes 
+--------------------------
+We have following list of non-primitive datatypes.
+
+ex:
+	datatype		description
+	---------		-----------
+	Object 			It is used to create an instance through which we can access 
+				the members.		
+
+	Array			It is used to represent similar elements.
+
+	RegEx 			It is used to represent regular expression.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

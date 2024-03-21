@@ -1,0 +1,654 @@
+Q) Types of List in HTML?
+
+We have three types of list in HTML.
+
+1) Ordered List 
+
+2) Unordered List 
+
+3) Description List 
+
+1) Ordered List 
+----------------
+A <ol> tag is used to represent ordered list with numerics and alphabets.
+
+An ordered list contains list of items.
+
+Each list of item we can represent by using <li> tag.
+
+ex:1
+----
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+	</head>
+	<body>
+		Courses:
+		<ol>
+			<li>ReactJS</li>
+			<li>AngularJS</li>
+			<li>NodeJS</li>
+			<li>ExpressJS</li>
+		</ol>	
+	</body>
+</html>
+
+ex:2
+----
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+	</head>
+	<body>
+		Courses:
+		<ol start="101">
+			<li>ReactJS</li>
+			<li>AngularJS</li>
+			<li>NodeJS</li>
+			<li>ExpressJS</li>
+		</ol>	
+	</body>
+</html>
+
+ex:3
+----
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+	</head>
+	<body>
+		Courses:
+		<ol type="I">
+			<li>ReactJS</li>
+			<li>AngularJS</li>
+			<li>NodeJS</li>
+			<li>ExpressJS</li>
+		</ol>	
+	</body>
+</html>
+
+ex:4
+----
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+	</head>
+	<body>
+		Courses:
+		<ol type="a">
+			<li>ReactJS</li>
+			<li>AngularJS</li>
+			<li>NodeJS</li>
+			<li>ExpressJS</li>
+		</ol>	
+	</body>
+</html>
+
+2) Unordered list 
+-----------------
+A <ul> tag is used to represent unordered list with bullets.
+
+Unordered list contains list of items.
+
+Each list of item we can represent by using <li> tag.
+
+ex:1
+----
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+	</head>
+	<body>
+		Courses:
+		<ul >
+			<li>ReactJS</li>
+			<li>AngularJS</li>
+			<li>NodeJS</li>
+			<li>ExpressJS</li>
+		</ul>	
+	</body>
+</html>
+
+ex:2
+----
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+	</head>
+	<body>
+		Courses:
+		<ul type="circle">
+			<li>ReactJS</li>
+			<li>AngularJS</li>
+			<li>NodeJS</li>
+			<li>ExpressJS</li>
+		</ul>	
+	</body>
+</html>
+
+ex:3
+----
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+	</head>
+	<body>
+		Courses:
+		<ul type="square">
+			<li>ReactJS</li>
+			<li>AngularJS</li>
+			<li>NodeJS</li>
+			<li>ExpressJS</li>
+		</ul>	
+	</body>
+</html>
+
+ex:4
+----
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+	</head>
+	<body>
+		Courses:
+		<ul type="disc">
+			<li>ReactJS</li>
+			<li>AngularJS</li>
+			<li>NodeJS</li>
+			<li>ExpressJS</li>
+		</ul>	
+	</body>
+</html>
+
+3) Description list 
+--------------------
+A <dl> tag is used to represent description list.
+
+A description list contains description term and description definition.
+
+A <dt> tag is used to represent description term.
+
+A <dd> tag is used to represent descripton definition.
+
+ex:
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+	</head>
+	<body>
+		<dl>
+			<dt>HTML5</dt>
+			<dd>
+				HTML5 is a advanced hypertext markuplanguage 
+				which is used to develop leight weight components.
+			</dd>
+		</dl>
+
+		<dl>
+			<dt>CSS</dt>
+			<dd>
+				CSS stands for Cascading Styles Sheet and it 
+				widely used language on web like html.
+			</dd>
+		</dl>
+	</body>
+</html>
+
+
+HTML Tables
+===========
+HTML table is used to represent the data.
+
+HTML table is used to store the data in the form of rows and columns.
+
+A <table> tag is used to represent HTML table.
+
+A <tr> tag is used to represent table row.
+
+A <th> tag is used to represent table heading.
+
+A <td> tag is used to represent table data.
+
+ex:1
+----
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+	</head>
+	<body>
+		<table border="0">
+			<tr>
+				<th>NO</th>
+				<th>NAME</th>
+				<th>ADDRESS</th>
+			</tr>
+			<tr>
+				<td>101</td>
+				<td>Alan</td>
+				<td>Florida</td>	
+			</tr>
+			<tr>
+				<td>102</td>
+				<td>Jose</td>
+				<td>Texas</td>	
+			</tr>
+			<tr>
+				<td>103</td>
+				<td>Nelson</td>
+				<td>Vegas</td>	
+			</tr>
+		</table>
+	</body>
+</html>
+
+ex:2
+----
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+	</head>
+	<body>
+		<table border="1">
+			<tr>
+				<th>NO</th>
+				<th>NAME</th>
+				<th>ADDRESS</th>
+			</tr>
+			<tr>
+				<td>101</td>
+				<td>Alan</td>
+				<td>Florida</td>	
+			</tr>
+			<tr>
+				<td>102</td>
+				<td>Jose</td>
+				<td>Texas</td>	
+			</tr>
+			<tr>
+				<td>103</td>
+				<td>Nelson</td>
+				<td>Vegas</td>	
+			</tr>
+		</table>
+	</body>
+</html>
+
+ex:3
+----
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+	</head>
+	<body>
+		<table border="1" width="100%">
+			<tr>
+				<th>NO</th>
+				<th>NAME</th>
+				<th>ADDRESS</th>
+			</tr>
+			<tr>
+				<td>101</td>
+				<td>Alan</td>
+				<td>Florida</td>	
+			</tr>
+			<tr>
+				<td>102</td>
+				<td>Jose</td>
+				<td>Texas</td>	
+			</tr>
+			<tr>
+				<td>103</td>
+				<td>Nelson</td>
+				<td>Vegas</td>	
+			</tr>
+		</table>
+	</body>
+</html>
+
+ex:4
+-----
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+	</head>
+	<body>
+		<table border="1" width="100%">
+			<caption>Employee Details</caption>
+			<tr bgcolor="cyan">
+				<th>NO</th>
+				<th>NAME</th>
+				<th>ADDRESS</th>
+			</tr>
+			<tr>
+				<td>101</td>
+				<td>Alan</td>
+				<td>Florida</td>	
+			</tr>
+			<tr>
+				<td>102</td>
+				<td>Jose</td>
+				<td>Texas</td>	
+			</tr>
+			<tr>
+				<td>103</td>
+				<td>Nelson</td>
+				<td>Vegas</td>	
+			</tr>
+		</table>
+	</body>
+</html>
+
+ex:5
+-----
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+	</head>
+	<body>
+		<table border="1" cellspacing="10px" cellpadding="10px">
+			<tr>
+				<th>NO</th>
+				<th>NAME</th>
+				<th>ADDRESS</th>
+			</tr>
+			<tr>
+				<td>101</td>
+				<td>Alan</td>
+				<td>Florida</td>	
+			</tr>
+			<tr>
+				<td>102</td>
+				<td>Jose</td>
+				<td>Texas</td>	
+			</tr>
+			<tr>
+				<td>103</td>
+				<td>Nelson</td>
+				<td>Vegas</td>	
+			</tr>
+		</table>
+	</body>
+</html>
+
+ex:6
+----
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+	</head>
+	<body>
+		<table border="1" >
+			<tr>
+				<th>NO</th>
+				<th>NAME</th>
+				<th>ADDRESS</th>
+			</tr>
+			<tr>
+				<td>101</td>
+				<td>Alan</td>
+				<td>Florida</td>	
+			</tr>
+			<tr>
+				<td>102</td>
+				<td>Jose</td>
+				<td>Texas</td>	
+			</tr>
+			<tr>
+				<td>103</td>
+				<td>Nelson</td>
+				<td>Vegas</td>	
+			</tr>
+			<tr>
+				<td colspan="3">Thank You</td>	
+			</tr>
+		</table>
+	</body>
+</html>
+
+Notepad++ Editor
+================
+Download link: https://notepad-plus-plus.org/downloads/
+
+
+
+HTML Form
+=========
+Forms are used to accept the values from the user.
+
+Forms are used to forward the data to database or server for processing.
+
+A <form> tag is used to represent HTML form.
+
+We have following list of form components.
+
+ex:
+	label 
+	textfield
+	radio button
+	checkbox 
+	select box 
+	text area 
+	buttons 
+	and etc.
+
+ex:1
+-----
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+	</head>
+	<body>
+			<form>
+					<label>UserName:</label>
+					<input type="text" name="t1"/>
+					<br>
+					<label>Password:</label>
+					<input type="password" name="t2"/>
+					<br>
+					<label>Age:</label>
+					<input type="number" name="t3"/>
+					<br>
+					<label>Maritial Status:</label>
+					<input type="checkbox" name="t4" value="married"/> MARRIED
+					<input type="checkbox" name="t4" value="single"/> SINGLE
+					<br>
+					<label>Gender:</label>
+					<input type="radio" name="t5" value="male"/> MALE
+					<input type="radio" name="t5" value="female"/> FEMALE
+					<br>
+					<label>Country:</label>
+					<select>
+						<option value="">none</option>	
+						<option value="india">India</option>	
+						<option value="australia">Australia</option>	
+						<option value="america">America</option>				
+					</select>
+					<br>
+					<label>Address:</label>
+					<textarea rows="5" cols="10"></textarea>	
+					<br>
+					<input type="reset" value="reset"/>
+					<input type="submit" value="submit"/>
+			</form>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

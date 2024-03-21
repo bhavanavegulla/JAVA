@@ -1,0 +1,202 @@
+Q)What is the difference between HTML and HTML5 ?
+
+HTML						HTML5
+-------------					---------
+To represent HTML document we will use 		To represent HTML5 document we will use 
+<!DOCTYPE>. 					<!DOCTYPE html>.
+
+It is bit slow.					It is more faster because it is leight weight.
+
+It is a inflexible for the programmer.		It is a flexible for the programmer.
+
+It is less mobile friendly.			It is more mobile friendly.
+
+It does not allow us to execute javascript code.It allows us to execute javascript code by 						using JS Web Work API.
+
+It does not support drop down menu.		It supports drop down menu.
+
+Vector graphics is possible by using 		Vector graphics is possible by using internal 
+technologies like VML, Silver Light, Adobe 	technologies like SVG and CANVAS.
+Flash and etc.
+
+We can't play audio and video without using 	We can play audio and video with the help of 
+flash player.					<audio> and <video> tags.
+
+It can't handle inaccurate syntax.		It can handle inaccurate syntax.
+
+Shapes like circle, rectangle, polygon and etc	Shapes like circle, rectangle, polygon and etc
+are not easy to draw.				are easy to draw.
+
+Q) What is the difference between <div> and <span> tag?
+
+div						span
+--------					-------
+It is a block element.				It is a inline element.
+
+It is used to wrap the sections.		It is used to wrap small portion of a text.
+
+It is used to design CSS based layouts.		It is used to stylize the text.	
+
+
+How HTML document executes in browser window
+=============================================
+Diagram: class7.1
+
+HTML parser will parse the data from HTML document and it gives to DOM.
+
+DOM stands for Document Object Model.
+
+Every browser contains DOM.
+
+DOM will take the data from HTML parser and converts to Tree Node Structure.
+
+Later ,A tree node structure will execute in a browser window.
+
+
+CSS
+=====
+CSS stands for Cascade Styles Sheet.
+
+CSS is used to apply the styles on elements.
+
+The latest version of CSS3 was introduced in 2001.
+
+The main objective of CSS3 are
+
+1) To set the positioning of an element.
+
+2) To apply the styles on elements to describe who an element should look like.
+
+3) To perform some sort of animations.
+
+CSS syntax
+----------
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>	
+		<style>
+			-
+			-  css properties 
+			-
+		</style>	
+	</head>
+	<body>
+		-
+		-
+		-
+	</body>
+</html>
+Note:
+-----
+	Here style will cascade from head to body.
+
+ex:1
+-----
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+		<style>
+			h1
+			{
+				color:blue;	
+				background-color:cyan;
+			}				
+		</style>
+	</head>
+	<body>
+			<h1> This is Heading Tag </h1>
+	</body>
+</html>
+
+ex:2
+----
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+		<style>
+			h1
+			{
+				color:blue;	
+				background-color:cyan;
+				text-align:center;
+			}				
+		</style>
+	</head>
+	<body>
+			<h1> This is Heading Tag </h1>
+	</body>
+</html>
+
+CSS Syntax
+=========
+CSS syntax contains selector and declaration block.
+
+ex:				declaration block 
+				|
+	  |---------------------------------------------------|
+	h1{color:blue;background-color:cyan;text-align:center;}		
+	|
+	selector 
+
+Declaration block contains multiple CSS properties.
+
+Each CSS property contains property name and property value seperated with colon.
+
+Each CSS property ends with semicolon.
+
+
+Advantages of CSS
+=================
+1) It is easy to learn and easy to use.
+
+2) It saves lot of development time.
+
+3) It supported by all major browsers.
+
+4) It support global change.
+
+5) Flexibility. 
+
+Disadvantages of CSS
+===================
+1) Fragmentation 
+
+2) Need to update all the versions of CSS.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

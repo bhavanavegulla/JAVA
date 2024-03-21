@@ -1,0 +1,217 @@
+How can convert Feet to Inches using addEventListener()
+=======================================================
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<table align="center">
+			<tr>
+				<td>Feet</td>
+				<td>&nbsp;</td>
+				<td>Inches</td>
+			</tr>
+			<tr>
+				<td><input type="text" id="feet"/></td>
+				<td><big>=</big></td>
+				<td><input type="text" id="inches"/></td>
+			</tr>
+		</table>
+
+		<script>
+				var feet=document.getElementById('feet');
+				var inches=document.getElementById('inches');
+				feet.addEventListener('input',function(){
+					var f=this.value;
+					var i=f*12;
+					inches.value=i;
+				})	
+				inches.addEventListener('input',function(){
+					var i=this.value;
+					var f=i/12;
+					if(!Number.isInteger(f))
+					{
+						f=f.toFixed(2);
+					}
+					feet.value=f;
+				})
+
+		</script>
+</body>
+</html>
+
+
+Date 
+======
+Date is a javascript object which is used to display date and time.
+
+Using Date object we can display timer on the web page.
+
+ex:
+---
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<script>
+			var date=new Date();
+			document.writeln(date);
+		</script>
+
+</body>
+</html>
+
+ex:
+---
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<script>
+			var date=new Date();
+			var d=date.getDate();
+			var m=date.getMonth()+1;
+			var y=date.getFullYear();
+			document.writeln(d+"/"+m+"/"+y);
+		</script>
+
+</body>
+</html>
+
+ex:
+----
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<script>
+			var date=new Date();
+			var h=date.getHours();
+			var m=date.getMinutes();
+			var s=date.getSeconds();
+			document.writeln(h+":"+m+":"+s);
+		</script>
+
+</body>
+</html>
+
+ex:
+----
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+	<style>
+		
+		body
+		{
+			background: linear-gradient(yellow,red);
+			height:100vh;
+			width:100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		span
+		{
+			font-size:40px;
+			box-shadow:2px 2px 19px 3px #FFF;
+			color:#FFF;
+			font-weight: bold;
+		}
+
+	</style>
+</head>
+<body>
+		<span id="result"> </span>
+
+		<script>
+			window.onload=function(){getTime();}
+
+			function getTime()
+			{
+				var d=new Date();
+				var h=d.getHours();
+				var m=d.getMinutes();
+				var s=d.getSeconds();
+
+				m=check(m);
+				s=check(s);
+
+				document.getElementById('result').innerHTML=h+":"+m+":"+s;
+				setInterval(getTime,1000);
+			}
+			function check(i)
+			{
+				if(i<10)
+				{
+					i= "0"+i;
+				}
+				return i;
+			}
+		</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,570 @@
+CSS Design 1
+=============
+Task1
+|
+|------css
+	|
+	|---mystyles.css
+
+|------images
+	|
+	|---rock.jpg
+|
+|------index.html 
+
+
+index.html
+-----------
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+		
+		<!-- add external css -->
+		<link rel="stylesheet" href="css/mystyles.css">
+		
+	</head>
+	<body>
+		
+		<div class="container">
+		
+				<div class="box1">
+					<img src="images/rock.png"/>
+				</div>
+				
+				<div class="box2">
+					<h3>Dwayne Johnson</h3>
+					
+					<p>
+						Dwayne Douglas Johnson (born May 2, 1972), also known by his ring name The Rock, is an American actor, businessman, and professional wrestler. He is currently signed to WWE. Widely regarded as one of the greatest professional wrestlers of all time,[5][6] he was integral to the development and success of the World Wrestling Federation (WWF, now WWE) during the Attitude Era, an industry boom period in the late 1990s and early 2000s. Johnson wrestled for the WWF for eight years before pursuing an acting career. His films have grossed over $3.5 billion in North America and over $10.5 billion worldwide,[7] making him one of the world's highest-grossing and highest-paid actors.[8][9][10] He is a co-owner of the United Football League, a professional American football league.[11][12][13] He is also a member of the board of directors of TKO Group Holdings, the parent company of UFC and WWE
+					</p>
+					
+				</div>
+		</div>
+		
+	</body>
+</html>
+
+
+mystyles.css
+-------------
+*
+{
+	margin:0;
+	padding:0;
+}
+body
+{
+		background-color:#2bcbba;
+}
+.container
+{
+	width:800px;
+	height:400px;
+	/*background-color:#00FF00;*/
+	margin:100px auto;
+	box-shadow: 2px 2px 17px 4px #FFF;
+}
+.box1
+{
+		width:400px;
+		height:400px;
+		/*background-color:rgb(255,0,0);*/
+		float:left;
+}
+.container .box1  img
+{
+		width:100%;
+		height:100%;
+}
+.box2
+{
+		width:400px;
+		height:400px;
+		/*background-color:hsl(60,100%,50%);*/
+		float:right;
+}
+
+.container .box2 h3
+{
+		text-align:center;
+		padding:15px;
+		text-decoration:underline;
+}
+.container .box2 p
+{
+	padding:15px;
+	text-align:justify;
+}
+
+
+CSS clear property 
+==================
+The clear property controls the flow next to floated elements. 
+
+
+ex:1
+-----
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+		<style>
+			#box1
+			{
+				width:200px;
+				height:200px;
+				background-color:rgb(255,0,0);
+				float:left;
+			}
+			#box2
+			{
+				width:200px;
+				height:200px;
+				background-color:hsl(60, 100%, 50%);
+				float:left;
+			}
+		</style>
+	</head>
+	<body>
+			<div id="box1"></div>
+			<div id="box2"></div>
+	</body>
+</html>
+
+ex:
+---
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+		<style>
+			#box1
+			{
+				width:200px;
+				height:200px;
+				background-color:rgb(255,0,0);
+				float:left;
+			}
+			#box2
+			{
+				width:200px;
+				height:200px;
+				background-color:hsl(60, 100%, 50%);
+				float:right;
+			}
+		</style>
+	</head>
+	<body>
+			<div id="box1"></div>
+			<div id="box2"></div>
+	</body>
+</html>
+
+ex:3
+----
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+		<style>
+			#box1
+			{
+				width:200px;
+				height:200px;
+				background-color:rgb(255,0,0);
+				float:left;
+			}
+			#box2
+			{
+				width:200px;
+				height:200px;
+				background-color:hsl(60, 100%, 50%);
+				float:right;
+			}
+			#box3
+			{
+				width:100%;
+				height:200px;
+				background-color:#00ff00;
+				clear:none;
+			}
+		</style>
+	</head>
+	<body>
+			<div id="box1"></div>
+			<div id="box2"></div>
+			<div id="box3"></div>
+	</body>
+</html>
+
+ex:4
+-----
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+		<style>
+			#box1
+			{
+				width:200px;
+				height:200px;
+				background-color:rgb(255,0,0);
+				float:left;
+			}
+			#box2
+			{
+				width:200px;
+				height:200px;
+				background-color:hsl(60, 100%, 50%);
+				float:right;
+			}
+			#box3
+			{
+				width:100%;
+				height:200px;
+				background-color:#00ff00;
+				clear:both;
+			}
+		</style>
+	</head>
+	<body>
+			<div id="box1"></div>
+			<div id="box2"></div>
+			<div id="box3"></div>
+	</body>
+</html>
+
+ex:5
+-----
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+		<style>
+			#box1
+			{
+				width:200px;
+				height:300px;
+				background-color:rgb(255,0,0);
+				float:left;
+			}
+			#box2
+			{
+				width:200px;
+				height:200px;
+				background-color:hsl(60, 100%, 50%);
+				float:right;
+			}
+			#box3
+			{
+				width:100%;
+				height:200px;
+				background-color:#00ff00;
+				clear:left;
+			}
+		</style>
+	</head>
+	<body>
+			<div id="box1"></div>
+			<div id="box2"></div>
+			<div id="box3"></div>
+	</body>
+</html>
+
+ex:6
+------
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+		<style>
+			#box1
+			{
+				width:200px;
+				height:300px;
+				background-color:rgb(255,0,0);
+				float:left;
+			}
+			#box2
+			{
+				width:200px;
+				height:200px;
+				background-color:hsl(60, 100%, 50%);
+				float:right;
+			}
+			#box3
+			{
+				width:100%;
+				height:200px;
+				background-color:#00ff00;
+				clear:right;
+			}
+		</style>
+	</head>
+	<body>
+			<div id="box1"></div>
+			<div id="box2"></div>
+			<div id="box3"></div>
+	</body>
+</html>
+
+
+
+CSS Display property
+======================
+The display property spcifies the display behaviour of an element.
+
+syntax
+--------
+	display: value;
+
+value		description
+---------	-------------------
+none		The element is completely removed.
+
+inline 		displays an element as on inline element.
+		Any height and width properties will not effect.
+
+block		Displays an element as block element.
+		IT starts on a new line and takes up the whole width.
+
+inline-block	displays an element as an inline-level container.
+		The element itself is formatting  as an inline element.
+		but we can apply height and width values.
+
+inherit		Inherits this property from its parent element.
+
+
+
+ex:1
+------
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+		<style>
+			h1
+			{
+				display:none;
+			}
+			p
+			{
+				display:none;
+			}
+		</style>
+	</head>
+	<body>
+			<h1>Heading Tag</h1>
+			<p>Paragraph Tag</p>
+	</body>
+</html>
+
+ex:2
+-----
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+		<style>
+			div
+			{
+				display:inline;
+			}
+		</style>
+	</head>
+	<body>
+			<div>Division Tag</div>
+			<div>Division Tag</div>
+			<div>Division Tag</div>
+	</body>
+</html>
+
+ex:3
+---
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+		<style>
+			span
+			{
+				display:block;
+				border:2px solid black;
+				width:50%;
+			}
+		</style>
+	</head>
+	<body>
+			<span>Span Tag</span>
+			<span>Span Tag</span>
+			<span>Span Tag</span>
+	</body>
+</html>
+
+ex:4
+----
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+		<style>
+			span
+			{
+				display:inline-block;
+				border:2px solid black;
+				width:200px;
+			}
+		</style>
+	</head>
+	<body>
+			<span>Span Tag</span>
+			<span>Span Tag</span>
+			<span>Span Tag</span>
+	</body>
+</html>
+
+box-sizing  property
+=====================
+The box-sizing property defines how the width and height of an element are calculated: should they include padding and borders, or not.
+
+
+box-sizing:content-box
+----------------------------
+It will take seperate width,border and padding.But it will not take  margin.
+ex:1
+----
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+		<style>
+			div
+			{
+				width:300px;
+				height:300px;
+				background-color:yellow;
+				border:2px solid red;
+				padding:10px;
+				box-sizing:content-box;
+			}
+		</style>
+	</head>
+	<body>
+			<div></div>
+	</body>
+</html>
+
+box-sizing:border-box
+---------------------------
+It includes width,border and padding.But it will not include marging.
+
+ex:2
+----
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+		<style>
+			div
+			{
+				width:300px;
+				height:300px;
+				background-color:yellow;
+				border:2px solid red;
+				padding:10px;
+				box-sizing:border-box;
+			}
+		</style>
+	</head>
+	<body>
+			<div></div>
+	</body>
+</html>
+
+
+CSS Design2
+============
+Task2
+|
+|-----css
+	|
+	|----mystyles.css
+|
+|----index.html 
+
+
+index.html
+-----------
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+		<!-- add external css -->
+		<link rel="stylesheet" href="css/mystyles.css">
+	</head>
+	<body>
+			<header class="header">
+				<h3> I<span>HUB</span>TALENT </h3>	
+				<ul>
+					<li><a href="">Home </a></li>
+					<li><a href="">About </a></li>
+					<li><a href="">Service </a></li>
+					<li><a href="">Portfolio </a></li>
+					<li><a href="">Contact </a></li>
+				</ul>
+			</header>
+	</body>
+</html>
+
+mystyles.css
+------------
+
+			*
+			{
+				margin:0;
+				padding:0;
+			}
+			.header
+			{
+				width:100%;
+				height:40px;
+				background-color:#c56cf0;
+			}
+			h3
+			{
+				float:left;
+				padding-left:20px;
+				padding-top:10px;
+				color:#FFF;
+			}
+			h3 span
+			{
+				font-style:italic;
+				color:#000;
+			}
+			ul
+			{
+				float:right;
+				list-style-type:none;
+			}
+			ul li
+			{
+				display:inline-block;
+				width:90px;
+			}
+			ul li a 
+			{
+				text-decoration:none;
+				color:#FFF;
+				font-size:15px;
+				line-height:40px;
+			}
+			ul li a:hover
+			{
+				color:#000;
+			}
+	
+
+
+

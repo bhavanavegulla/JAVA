@@ -1,0 +1,942 @@
+JavaScript IF ELSE Statement
+===========================
+We have three forms of javascript if else statement.
+
+1) IF STMT 
+
+2) IF ELSE STMT 
+
+3) IF ELSE IF STMT 
+
+1) IF STMT 
+-----------
+It will evaluate the code only if our condition is true.
+
+syntax:
+-----
+	if(condition)
+	{
+		-
+		- //code to be evaluate 
+		-	
+	}
+
+ex:
+---
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<script>
+
+				if(0,1,2,3,4,5)
+				{
+					document.writeln("Hi!!!");
+				}
+		
+		</script>
+</body>
+</html>
+
+ex:
+---
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<script>
+
+				if(5,4,3,2,1,0)
+				{
+					document.writeln("Hi!!!");
+				}
+		
+		</script>
+</body>
+</html>
+
+ex:
+---
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<script>
+
+				if(-1)
+				{
+					document.writeln("Hi!!!");
+				}
+		
+		</script>
+</body>
+</html>
+
+
+Q) Write a program to find out greatest of two numbers?
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<script>
+
+				var a=10,b=20;
+
+				if(a>b)
+					document.writeln(a+" is greatest");
+				if(b>a)
+					document.writeln(b+" is greatest");
+		
+		</script>
+</body>
+</html>
+
+
+2) IF ELSE STMT
+----------------
+It is used to evaluate the code either our condition is true or false.
+
+syntax:
+	if(condition)
+	{
+		-
+		- //code to be evaluate if condition is true 
+		-
+	}
+	else
+	{
+		-
+		-//code to be evaluate if condition is false 
+		-
+	}
+
+ex:
+---
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<script>
+
+				if(5>20)
+				{
+						document.writeln("TRUE");
+				}
+				else
+				{
+						document.writeln("FALSE");
+				}
+		
+		</script>
+</body>
+</html>
+
+ex:
+---
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<script>
+
+				if(5>2)
+				{
+						document.writeln("TRUE");
+				}
+				else
+				{
+						document.writeln("FALSE");
+				}
+		
+		</script>
+</body>
+</html>
+
+
+Q) Write a javascript program to find out given number is even or odd?
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<script>
+
+				var sno=prompt("Enter the number :");
+
+				var n=parseInt(sno); //5
+		
+				if((n & 1)==0)
+					document.writeln("It is even number");
+				else
+					document.writeln("It is odd number ");
+
+				/*
+					5 - 0101
+					1 - 0001
+					--------
+					& - 0001
+				*/
+
+		</script>
+</body>
+</html>
+
+3) IF ELSE IF STMT 
+-------------------
+It will evaluate the code based on multiple conditions.
+
+syntax:
+	if(cond1)
+	{
+		- //code to be evaluate 
+	}
+	else if(cond2)
+	{
+		- //code to be evaluate 
+	}
+	else if(cond3)
+	{
+		- //code to be evaluate 
+	}
+	else
+	{	
+		- //code to be evaluate if all conditions are false
+	}
+
+ex:
+---
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<script>
+
+				var sno=prompt("Enter the option :");
+
+				var option=parseInt(sno); //
+		
+				if(option==100)
+					document.writeln("It is police number");
+				else if(option==103)
+					document.writeln("It is enquiry number");
+				else if(option==108)
+					document.writeln("It is emergency number");
+				else
+					document.writeln("Invalid option");
+
+		</script>
+</body>
+</html>
+
+
+
+
+Javascript Switch Case
+======================
+It will evaluate the code based on multiple conditions.
+
+It is similar to if else if statement.
+
+syntax:
+	switch(condition)
+	{
+		case value1: //code to be evaluate 
+			     break stmt;	
+
+		case value2: //code to be evaluate 
+			     break stmt;	
+
+		-
+		-
+		default:  //code to be evaluate if all cases are false
+	}
+
+
+ex:
+---
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<script>
+
+				var sno=prompt("Enter the option :");
+
+				var option=parseInt(sno); //
+		
+				switch(option)
+				{
+					case 100: document.writeln("It is police number");
+							  break; 
+
+					case 103: document.writeln("It is enquiry number");
+							  break; 
+
+					case 108: document.writeln("It is emergency number");
+							  break; 
+
+					default: document.writeln("Invalid option");
+
+				}
+
+		</script>
+</body>
+</html>
+
+ex:
+---
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<script>
+
+				var ch=prompt("Enter the Alphabet :");
+		
+				switch(ch)
+				{
+					case 'a': document.writeln("It is a vowel"); break;
+					case 'e': document.writeln("It is a vowel"); break;
+					case 'i': document.writeln("It is a vowel"); break;
+					case 'o': document.writeln("It is a vowel"); break;
+					case 'u': document.writeln("It is a vowel"); break;
+					default: document.writeln("It is a consonent");
+
+				}
+
+		</script>
+</body>
+</html>
+
+Javascript loops
+=================
+LOOPS are used to iterate the code for multiple times.
+
+We have four types of loops in javascript.
+
+1) do while loop
+
+2) while loop 
+
+3) for loop 
+
+4) for in loop 
+
+1) do while loop
+-----------------
+It will evaluate the code only if our condition is true.
+
+syntax:
+	do
+	{
+		-
+		- //code to be evaluate 
+		-
+	}while(condition);
+
+ex:
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<script>
+
+				var i=1;
+				do
+				{
+					document.writeln(i);//1 2 3 4 5 6 7 8 9 10
+
+					i++;	
+
+				}while(i<=10)
+
+		</script>
+</body>
+</html>
+
+ex:
+---
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<script>
+
+				var i=10;
+				do
+				{
+					document.writeln(i);//10 9 8 7 6 5 4 3 2 1 
+					i--;	
+
+				}while(i>=1)
+
+		</script>
+</body>
+</html>
+
+ex:
+---
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<script>
+
+	
+				var i=1,n=5;
+				do
+				{
+					document.writeln(n+"*"+i+"="+n*i+"<br>");//
+					i++;	
+
+				}while(i<=10)
+
+		</script>
+</body>
+</html>
+
+2) while loop
+=============
+It will evaluate the code only if our condition is true.
+
+syntax:
+	while(condition)
+	{
+		-
+		- //code to be evaluate 
+		-
+	}
+
+ex:
+---
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<script>
+
+	
+				var i=10;
+				while(i>=1)
+				{
+						document.writeln(i);//10 9 8 7 6 5 4 3 2 1 
+						i--;
+				}
+
+		</script>
+</body>
+</html>
+
+ex:
+---
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<script>
+
+				var i=1,sum=0;
+
+				while(i<=10)
+				{
+					sum+=i;
+
+					i++;
+				}
+				document.writeln(sum); 
+				
+
+		</script>
+</body>
+</html>
+
+3) for loop
+==========
+It will evalute the code only if our condition is true.
+
+syntax:
+	for(initialization;condition;incrementation/decremenation)
+	{
+		-
+		- //code to be evaluate
+		-
+	}
+
+ex:
+---
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<script>
+
+				for(var i=1;i<=10;i++)
+				{
+					document.writeln(i);//infinite 1  
+
+					i--;
+				}
+				
+
+		</script>
+</body>
+</html>
+
+ex:
+---
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<script>
+				var n=5;
+
+				for(var i=1;i<=10;i++)
+				{
+					document.writeln(n+" * "+i+" = "+n*i+"<br>");
+				}
+				
+
+		</script>
+</body>
+</html>
+
+ex:
+---
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<script>
+				var n=5,result=1;
+
+				for(var i=n;i>=1;i--)
+				{
+					result*=i;
+				}
+				document.writeln(result);
+				
+
+		</script>
+</body>
+</html>
+
+4) for in loop
+==============
+It is used to iterate the elements from array.
+
+ex:
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<script>
+			
+			var arr=[10,20,30,40];
+
+			for(var i in arr)
+			{
+				document.writeln(arr[i]);
+			}	
+				
+
+		</script>
+</body>
+</html>
+
+ex:
+---
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<script>
+			
+			var arr=['a','b','c'];
+
+			for(var i in arr)
+			{
+				document.writeln(arr[i]);
+			}	
+				
+
+		</script>
+</body>
+</html>
+
+ex:
+---
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPage!</title>
+</head>
+<body>
+		<script>
+			
+			var arr=["hi","hello","bye"];
+
+			for(var i in arr)
+			{
+				document.writeln(arr[i]);
+			}	
+				
+
+		</script>
+</body>
+</html>
+
+Note:
+------
+If number of iterations are known by the user then we need to use for loop.
+
+If number of iterations are not known by the user then we need to use while loop.
+
+If number of iterations are not known by the user but code must execute atleast for one time then we need to use do while loop.
+
+Interview Question
+===================
+Q) Write a java program to display longest/largest common subsequence?
+
+Input:
+	ABCAB
+	AECB
+
+Output:
+	3
+
+class Test  
+{
+	public static void main(String[] args) 
+	{
+		String firstStr="ABCAB";
+		String secondStr="AECB";
+		
+		//caller method 
+		System.out.println(longestCommonSubsequence(firstStr,secondStr));
+	}
+	public static int longestCommonSubsequence(String str1,String str2)
+	{
+			return solve(str1,str2,0,0);
+	}
+	public static int solve(String s1,String s2,int i,int j)
+	{
+			if(i==s1.length())
+				return 0;
+			if(j==s2.length())
+				return 0;
+
+			int ans=0;
+
+			if(s1.charAt(i) == s2.charAt(j))
+			{
+				ans=1+solve(s1,s2,i+1,j+1);
+			}
+			else
+			{
+				ans= Math.max(solve(s1,s2,i+1,j),solve(s1,s2,i,j+1));
+			}
+
+			return ans;
+
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

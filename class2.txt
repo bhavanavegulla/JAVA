@@ -1,0 +1,383 @@
+UTF-8 
+======
+UTF stands for Unicode Transformation Format.
+
+It is a encoding method which describes what character set a website is written with.
+
+ex:
+---
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+
+		<meta charset="UTF-8">
+		<meta name="description" content="Training Website">
+		<meta name="keywords"  content="HTML CSS JS Bootstrap">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="Niyaz sir">
+		<meta http-equiv="refresh" content="05">	
+		<meta name="copyright" content="copy right by niyaz sir">
+		
+	</head>
+	<body>
+		Welcome to HTML classes	by Niyaz sir
+	</body>
+</html>
+
+
+Basic HTML Tags
+===============
+
+Heading Tags
+============
+Heading tags are is used to display the text in bold and size of the text depends upon number of heading tag.
+
+We have six heading tags <h1> to <h6>.
+
+ex:
+----
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+	</head>
+	<body>
+		<h1>Heading Tag 1</h1>
+		<h2>Heading Tag 2</h2>
+		<h3>Heading Tag 3</h3>
+		<h4>Heading Tag 4</h4>
+		<h5>Heading Tag 5</h5>
+		<h6>Heading Tag 6</h6>
+	</body>
+</html>
+
+Paragraph tag
+===============
+A <p> tag is used to display the paragraph in html.
+
+ex:
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+	</head>
+	<body>
+		<p> HTML is a widely used language on web to develop web pages and web applications.</p>
+	</body>
+</html>
+
+Bold Tag
+======
+A <b> tag is used to display the text in bold without importance.
+
+ex:
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+	</head>
+	<body>
+		<b>This is Bold Tag</b>
+	</body>
+</html>
+
+strong  tag
+==========
+A <strong> tag is used to display text in bold with importance.
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+	</head>
+	<body>
+		<strong>This is strong tag</strong>
+	</body>
+</html>
+
+italic tag
+===========
+A <i> tag is used to display the text in italic without force.
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+	</head>
+	<body>
+		<i>This is italic tag</i>
+	</body>
+</html>
+
+Emphasize tag 
+==============
+A <em> tag is used to display the text in italic with force.
+
+ex:
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+	</head>
+	<body>
+		<em>This is emphasize tag</em>
+	</body>
+</html>
+
+Underline tag
+=============
+A <u> tag is used to display the text in underline.
+
+HTML5 does not support <u> tag.
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+	</head>
+	<body>
+		<u>This is underline tag</u>
+	</body>
+</html>
+
+center tag
+==========
+A <center> tag is used to display the text in center.
+
+HTML5 does not support <center> tag.
+
+ex:
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+	</head>
+	<body>
+		<center>
+			This is center tag
+		</center>
+	</body>
+</html>
+
+font tag
+========
+A <font> tag is used to display the text in color , change the size of the text and font family.
+
+HTML5 does not support <font> tag.
+
+ex:
+	
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+	</head>
+	<body>
+		<font color="red" size="30" face="monospace">
+			This is font tag
+		</font>
+	</body>
+</html>
+
+Breakline tag
+==============
+A <br> tag is used to break the line.
+
+ex:
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+	</head>
+	<body>
+		<b>It is bold tag </b>
+		<br>
+		<i>It is italic tag </i>
+	</body>
+</html>
+
+Horizontal line tag
+===================
+A <hr> tag is used to display the horizontal line.
+
+ex:
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+	</head>
+	<body>
+		<b>It is bold tag </b>
+		<hr>
+		<i>It is italic tag </i>
+	</body>
+</html>
+
+marquee tag
+=============
+A <marquee> tag is used to scroll the text.
+
+ex:
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+	</head>
+	<body>
+		<marquee>Welcome to IHUB TALENT MANAGEMENT html classes</marquee>
+	</body>
+</html>
+
+
+Nested tags in HTML
+==================
+In html we can declare nested tags.
+
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+	</head>
+	<body>
+		<center>
+			<h2>
+				<font color="blue" face="cursive">
+
+					Welcome to HTML class
+				</font>
+			</h2>
+		</center>
+	</body>
+</html>
+
+Phrase Tags
+============
+Phrase tags are special purpose tags because they defined structural meaning to text or block of code.
+
+We have following list of phrase tags.
+
+1) Abbreviation - <abr> 
+
+2) short quote  - <q> 
+
+3) keyboard     - <kbd>
+
+4) Code         - <code>   
+
+5) strike       - <strike> or <s> 
+
+6) address      - <address>
+
+7) definition   - <dfn> 
+
+and etc.
+
+1) Abbreviation - <abr> 
+-------------------------
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+	</head>
+	<body>
+		<abr title="HyperText Markup Language"> HTML5 </abr> is known as Advanced Hypertext Markup Language
+	</body>
+</html>
+
+2) short quote  - <q>
+--------------------
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MyPage!</title>
+	</head>
+	<body>
+		<q>HTML5 is known as Advanced Hypertext Markup Language</q>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,296 @@
+HTML5
+======
+HTML stands for Hypertext Markup Language.
+
+It is widely used language on web.
+
+It is used to develop web pages and web applications.
+
+It is developed by Burners Lee in late 1991.
+
+It is a tag based language.
+ex:
+	<html>
+
+It is a case insensitive language.
+ex:
+	<html>
+	<HTML>
+
+A tag contains opening tag and closing tag.
+ex:
+	<html> - opening tag 
+
+	</html> - closing tag 
+	
+Tag may contains attributes and each attribute contains attribute name and attribute value.
+ex:
+	<body  bgcolor="red">
+
+A tag may contains multiple attributes and each attribute seperated with space.
+ex:
+	<body  bgcolor="red"   background="yellow">
+
+A simple HTML document is called component.
+
+HTML is used to develop client side components.
+
+All HTML document executes in browser window.
+ex:
+	Chrome 
+	Mozilla 
+	Edge 
+	Opera
+	IE 
+	and etc.
+
+We need to save HTML documents by using .html or .htm extensions.
+
+HTML2.0 specification was released in 1995.
+
+HTML4.0 specification was released in 1999.
+
+HTML5 which is a extension of HTML4.0 was release in 2012.
+
+The main objective of HTML5 is to develop leight weight components.
+
+HTML5 is also know as Advanced Hypertext Markup language.
+
+
+Simple HTML Skeleton
+======================
+<!DOCTYPE html>
+<html>
+	<head>
+		-
+		- // Head related tags 
+		- 
+	</head>
+	<body>
+		-
+		- // Body related tags
+		-
+	</body>
+</html>
+
+Note:
+----
+A <!DOCTYPE> is used to represent html document.
+
+A <!DOCTYPE html> is used to represent html5 document.
+
+<html>
+=======
+It is a root tag for entire HTML document.
+
+It contains two child tags.
+
+1) head tag 
+
+2) body tag 
+
+<head>
+======
+A <head> tag is used to declare following things.
+ex:
+	1) title of a page 
+	2) favicon 
+	3) metadata 
+	4) styles 
+	5) scripts 
+
+<body>
+======
+A <body> tag is used to declare actual content of a web page.	
+
+ex:1
+----
+<!DOCTYPE html>
+<html>
+	<head>
+	
+	</head>
+	<body>
+		Welcome to HTML classes
+	</body>
+</html>
+
+ex:2
+----
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>IHUB TALENT</title>
+	</head>
+	<body>
+		Welcome to HTML classes
+	</body>
+</html>
+
+ex:3
+-----
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>IHUB TALENT</title>
+
+		<link rel="icon" href="logo.png">
+	</head>
+	<body>
+		Welcome to HTML classes
+	</body>
+</html>
+
+ex:4
+----
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- title -->
+		<title>IHUB TALENT</title>
+
+		<!-- favicon -->
+		<link rel="icon" href="logo.png">
+	</head>
+	<body>
+		<!-- msg -->
+		Welcome to HTML classes
+	</body>
+</html>
+
+ex:5
+-----
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- title -->
+		<title>IHUB TALENT</title>
+
+		<!-- favicon -->
+		<link rel="icon" href="logo.png">
+	</head>
+	<body bgcolor="cyan">
+		<!-- msg -->
+		Welcome to HTML classes
+	</body>
+</html>
+
+ex:6
+-----
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- title -->
+		<title>IHUB TALENT</title>
+
+		<!-- favicon -->
+		<link rel="icon" href="logo.png">
+	</head>
+	<body background="bg.jpeg">
+		<!-- msg -->
+		Welcome to HTML classes
+	</body>
+</html>
+
+
+Meta Tag
+=========
+A <meta> tag is used to display metadata of a document.
+
+Matadata means data of a data.
+
+Metadata is used by browser window, search engine and other web services.
+
+To declare a metadata we need to use <meta> tag.
+
+A <meta> tag must declare inside <head> tag.
+
+A <meta> tag is used to declare following things.
+
+1) description 
+
+2) Author 
+
+3) Keywords 
+
+4) viewport 
+
+5) REFRESH 
+
+6) Copyright 
+
+and etc.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
